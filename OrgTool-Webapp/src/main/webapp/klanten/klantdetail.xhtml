@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" xmlns:t="http://myfaces.apache.org/tomahawk">
+
+
+<ui:composition>
+
+    <rich:panel id="panelContainer">
+        <h:panelGrid columns="1" id="klantPanel">
+            <h:form id="klantForm" >
+                <h:messages/>
+                <h:panelGrid columns="2" id="basicKlantPanel">
+                    <h:outputLabel for="naamField" value="Klant naam: " id="naamLabel"/>
+                    <h:inputText value="#{klant.naam}" id="naamField" label="naamLabel"/>
+                    <h:outputLabel for="adresField" value="Adres: " id="adresLabel"/>
+                    <h:inputText value="#{klant.adres}" id="adresField" label="adresLabel"/>
+
+                    <!--<h:outputLabel for="personTypeCombo" value="Type: "/>-->
+                    <!--<rich:select value="#{personBean.currentPersonType}" id="personTypeCombo" onchange="#{personBean.switchPerson()}"  >-->
+                        <!--<f:selectItems value="#{personBean.klantTypes}" />-->
+                        <!--<a4j:ajax event="selectitem" execute="@form" render="@form :panelContainer :personPanel :personForm" limitRender="true" immediate="false" />-->
+                    <!--</rich:select>-->
+                </h:panelGrid>
+                <br/>
+
+                <rich:panel id="clientPanel" style="width:580px;">
+                    <f:facet name="header">
+                        <h:outputText value="Attach Client contact"/>
+                    </f:facet>
+
+                    <rich:pickList id="contactPickList" collectionType="java.util.ArrayList" value="#{klantBean.clientContacts}" sourceCaption="Available Contacts" targetCaption="Attached Contacts"
+                                   listWidth="165px" listHeight="100px" orderable="true" converter="#{contactConverter}"  >
+                        <f:selectItems value="#{personBean.contacts}" var="contactPersoon" itemValue="#{contactPersoon}" itemLabel="#{contactPersoon.personIdentifier}" />
+                        <!--<f:converter  binding="#{contactConverter}"  />-->
+                        <a4j:ajax event="change" execute="@form" render="@form :panelContainer :klantPanel :klantForm" limitRender="true" immediate="false" />
+                    </rich:pickList>
+
+                </rich:panel>
+
+
+                <br/><br/>
+                <a4j:commandButton id="klantSubmit" value="Submit" action="#{klantBean.submit(klant)}" execute="@form" render="@form :panelContainer :klantPanel :klantForm" limitRender="true"  >
+                </a4j:commandButton>
+
+            </h:form>
+
+        </h:panelGrid>
+    </rich:panel>
+    <br/>
+    <rich:messages/>
+
+</ui:composition>
+
+</html>
+

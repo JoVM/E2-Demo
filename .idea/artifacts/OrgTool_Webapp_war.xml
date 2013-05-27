@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="OrgTool-Webapp:war">
+    <output-path>$PROJECT_DIR$/OrgTool-Webapp/target</output-path>
+    <root id="archive" name="OrganisationTool.war">
+      <element id="artifact" artifact-name="OrgTool-Webapp:war exploded" />
+    </root>
+  </artifact>
+</component>

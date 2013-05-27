@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                        http://www.springframework.org/schema/security
+                        http://www.springframework.org/schema/security/spring-security-2.0.1.xsd">
+
+	<global-method-security secured-annotations="disabled" />
+
+    <http lowercase-comparisons="false" entry-point-ref="crowdAuthenticationProcessingFilterEntryPoint"> <!-- note: no auto-config attribute! -->
+        <!--<intercept-url pattern="/css/**" filters="none"/>-->
+        <!--<intercept-url pattern="/login.html" filters="none"/>-->
+        <!--<intercept-url pattern="/LoginPage.html" filters="none"/>-->
+        <!--<intercept-url pattern="/a4j/**" filters="none"/>-->
+        <!--<intercept-url pattern="/**" access="confluence-administrators" />-->
+
+        <!--<remember-me user-service-ref="userDao" key="e37f4b31-0c45-11dd-bd0b-0800200c9a66"/>-->
+        <!--
+        Wordt niet ondersteund in spring-security 2.x, kijk naar FilterSecurityInterceptor
+        <intercept-url pattern="/admin/*" access="ROLE_${groups.admins}"/>
+        <intercept-url pattern="/**/*.html*" access="ROLE_${groups.users},ROLE_${groups.admins}"/>
+    	-->
+    </http>
+
+    <authentication-manager alias="authenticationManager"/>
+
+    <beans:bean id="accessDecisionManager" class="org.springframework.security.vote.AffirmativeBased">
+        <beans:property name="allowIfAllAbstainDecisions" value="false"/>
+        <beans:property name="decisionVoters">
+
+            <beans:list>
+                <beans:bean class="org.springframework.security.vote.RoleVoter"/>
+                <beans:bean class="org.springframework.security.vote.AuthenticatedVoter"/>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="crowdAuthenticationProcessingFilterEntryPoint" class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+        <!--<beans:property name="loginFormUrl" value="/login.html"/>-->
+        <beans:property name="loginFormUrl" value="/LoginPage.html"/>
+    </beans:bean>
+	
+    <beans:bean id="filterInvocationInterceptor" class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<custom-filter before="FILTER_SECURITY_INTERCEPTOR" />
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+        <beans:property name="accessDecisionManager" ref="accessDecisionManager" />
+        <beans:property name="objectDefinitionSource">
+            <beans:value>
+                CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+                PATTERN_TYPE_APACHE_ANT
+                /**=ROLE_crowd-administrators,ROLE_confluence-administrators
+            </beans:value>
+			<!--<beans:value>-->
+				<!--CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON-->
+				<!--PATTERN_TYPE_APACHE_ANT-->
+				<!--/admin/*=ROLE_${crowd.groups.role.admin}-->
+				<!--/manager/*=ROLE_${crowd.groups.role.manager}-->
+        		<!--/surveys*=ROLE_${crowd.groups.role.manager},ROLE_${crowd.groups.role.admin}-->
+        		<!--/**/*.html*=ROLE_${crowd.groups.role.user},ROLE_${crowd.groups.role.manager},ROLE_${crowd.groups.role.admin},ROLE_${crowd.groups.role.customer}-->
+			<!--</beans:value>-->
+		</beans:property>
+	</beans:bean>
+
+    <beans:bean id="crowdAuthenticationProcessingFilter" class="com.atlassian.crowd.integration.springsecurity.CrowdSSOAuthenticationProcessingFilter">
+        <custom-filter position="AUTHENTICATION_PROCESSING_FILTER"/>
+        <beans:property name="httpAuthenticator" ref="httpAuthenticator"/>
+        <beans:property name="authenticationManager" ref="authenticationManager"/>
+        <beans:property name="authenticationFailureUrl" value="/LoginPage.html?error=true"/>
+        <beans:property name="defaultTargetUrl" value="/"/>
+        <beans:property name="targetUrlResolver" ref="targetRes" />
+        <!--<beans:property name="filterProcessesUrl" value="/j_spring_security_check"/>-->
+        <beans:property name="filterProcessesUrl" value="/j_security_check"/>
+        <beans:property name="alwaysUseDefaultTargetUrl" value="false" />
+    </beans:bean>
+
+    <beans:bean id="crowdLogoutHandler" class="com.atlassian.crowd.integration.springsecurity.CrowdLogoutHandler">
+        <beans:property name="httpAuthenticator" ref="httpAuthenticator"/>
+    </beans:bean>
+
+    <beans:bean id="logoutFilter" class="org.springframework.security.ui.logout.LogoutFilter">
+        <custom-filter position="LOGOUT_FILTER"/>
+        <beans:constructor-arg value="/"/>
+        <beans:constructor-arg>
+            <beans:list>
+                <beans:ref bean="crowdLogoutHandler"/>
+                <beans:bean class="org.springframework.security.ui.logout.SecurityContextLogoutHandler"/>
+            </beans:list>
+        </beans:constructor-arg>
+        <beans:property name="filterProcessesUrl" value="/logout.html"/>
+    </beans:bean>
+
+    <beans:bean id="crowdUserDetailsService"  class="com.atlassian.crowd.integration.springsecurity.user.CrowdUserDetailsServiceImpl">
+        <beans:property name="authenticationManager" ref="crowdAuthenticationManager"/>
+        <beans:property name="groupMembershipManager" ref="crowdGroupMembershipManager"/>
+        <beans:property name="userManager" ref="crowdUserManager"/>
+        <beans:property name="authorityPrefix" value="ROLE_"/>
+    </beans:bean>
+
+    <beans:bean id="crowdAuthenticationProvider"  class="com.atlassian.crowd.integration.springsecurity.RemoteCrowdAuthenticationProvider">
+        <custom-authentication-provider />
+        <beans:constructor-arg ref="crowdAuthenticationManager"/>
+        <beans:constructor-arg ref="httpAuthenticator"/>
+        <beans:constructor-arg ref="crowdUserDetailsService"/>
+    </beans:bean>
+    
+    <beans:bean id="targetRes" class="be.e2partners.controller.LoginTargetUrlResolverImpl"/>
+
+</beans:beans>

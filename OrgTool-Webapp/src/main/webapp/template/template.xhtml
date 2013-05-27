@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" xmlns:t="http://myfaces.apache.org/tomahawk">
+
+	<!--<f:loadBundle basename="ApplicationResources" var="messages" />-->
+
+	<f:view>
+		<h:head>
+		<title><h:outputText value="Organisation Tool" />
+		<h:outputText value=" 0.0.1-SNAPSHOT" />
+		<ui:insert name="pageTitle" /></title>
+		<ui:insert name="head"/>
+		<t:stylesheet path="/css/style.css" />
+
+		<!--<link rel="icon" type="image/png"-->
+			<!--href="#{request.contextPath}/images/icon.ico" />-->
+		</h:head>
+		<body>
+		 <div id="outerWrapper">
+	        <div id="innerWrapper">
+      		    <ui:include src="header.xhtml"/>
+      		    <ui:include src="menu.jspx">
+                  <ui:param name="page" value="#{page}" />
+                  <ui:param name="subPage" value="#{subPage}" />
+                </ui:include>
+      
+         		<!--<a4j:status rendered="#{renderWaitPanel}" onstart="#{rich:component('wait')}.show()"-->
+         			<!--onstop="#{rich:component('wait')}.hide()" />-->
+         		<!--<rich:popupPanel id="wait" autosized="true" width="200" height="120"-->
+         			<!--moveable="false" resizeable="false">-->
+         			<!--<f:facet name="header">-->
+         				<!--<h:outputText value="Secondje" />-->
+         			<!--</f:facet>-->
+         			<!--<h:outputText value="please wait..." />-->
+         		<!--</rich:popupPanel>-->
+		
+      		    <div id="content-container">
+            		<div id="messages">
+            			<h:messages id="simpleHeaderMessages" rendered="#{!dontRenderMessages}"
+            				errorClass="error" fatalClass="error" warnClass="warn"
+            				infoClass="info" showDetail="true" showSummary="false" />
+            		</div>
+   		            <div id="content"><ui:insert name="body" /></div>
+      		    </div>
+		    </div>
+		 </div>
+		</body>
+	</f:view>
+</html>

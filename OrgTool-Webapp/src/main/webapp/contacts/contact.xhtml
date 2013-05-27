@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:t="http://myfaces.apache.org/tomahawk"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+
+
+<ui:composition template="/template/template.xhtml">
+    <ui:param name="page" value="Contacten"/>
+    <!--todo: subpage needed?-->
+    <ui:param name="subPage" value="Contacten"/>
+    <ui:param name="renderWaitPanel" value="false"/>
+
+    <ui:define name="body">
+        <a4j:region>
+            <ui:include src="/common/persontable.xhtml" >
+                <ui:param name="persoonList"
+                          value="#{personBean.contacts}" />
+            </ui:include>
+
+        </a4j:region>
+
+
+    </ui:define>
+
+</ui:composition>
+</html>
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+	<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+	<ui:composition>
+		<div id="menu">
+		  <h:form id="menuForm">
+            <!-- LINKS  -->
+		  	<div class="menuLeft">
+		  		<!-- VISIBLE FOR ADMINS -->
+                  <!--TODO: when decided that only admins will ever view this, the rendering will always be true-->
+		  		<h:panelGroup id="adminMenu" rendered="true">
+
+                      <h:commandLink value="Home" action="home"
+						disabled="#{page == 'Home'}" immediate="true"  styleClass="menuActive"/>
+
+		  			<h:commandLink value="Medewerkers" action="medewerker"
+						disabled="#{page == 'Medewerkers'}" immediate="true"  styleClass="menuActive"/>
+
+                    <h:commandLink value="Freelancers" action="freelancer"
+                        disabled="#{page == 'Freelancers'}" immediate="true"  styleClass="menuActive"/>
+						
+					<h:commandLink value="Kandidaten" action="kandidaat"
+						disabled="#{page == 'Kandidaten'}" immediate="true"  styleClass="menuActive"/>
+
+                    <h:commandLink value="Contacten" action="contact"
+                                   disabled="#{page == 'Contacten'}" immediate="true"  styleClass="menuActive"/>
+							
+					<h:commandLink value="Klanten" action="klant"
+						disabled="#{page == 'Klanten'}" immediate="true"  styleClass="menuActive"/>
+						
+				</h:panelGroup>
+				
+
+		  	
+			</div>
+            <!-- LOGON INFO -->
+			<div class="menuRight">
+				<a4j:outputPanel rendered="true">
+					<h:outputText value="#{authenticationBean.loggedInUser}"/>
+					<a href="#{facesContext.externalContext.requestContextPath}/logout.html">Logout</a>
+				</a4j:outputPanel>
+			</div>
+		  </h:form>
+		</div>
+		
+		<div id="menu2">
+			<h:form id="adminMenuForm" >
+			<div class="menuLeft">
+				<!-- VISIBLE FOR ADMINS -->
+				<h:panelGroup rendered="true">
+					<h:panelGroup rendered="#{page == 'Home'}">
+						<h:commandLink value="Home" action="home" immediate="true"
+							styleClass="menu2active" disabled="#{subPage == 'Home'}"/>
+                        <!--todo: idea is popupmenu: list of entities-->
+						<h:commandLink value="Nieuwe entiteit" action="newEntity" immediate="true"
+							styleClass="menu2active" disabled="#{subPage == 'NewEntity'}"/>
+					</h:panelGroup>
+
+					<h:panelGroup rendered="#{page == 'Medewerkers'}">
+						<h:commandLink value="Medewerkers" action="medewerker" immediate="true"
+							styleClass="menu2active" disabled="#{subPage == 'Medewerkers'}"/>
+
+                        <h:commandLink value="Nieuwe Medewerker" action="medewerker.new" immediate="true"
+							styleClass="menu2active" disabled="#{subPage == 'new.medewerker'}"/>
+					</h:panelGroup>
+
+                    <h:panelGroup rendered="#{page == 'Freelancers'}">
+                        <h:commandLink value="Freelancers" action="freelancer" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'Freelancers'}"/>
+
+                        <h:commandLink value="Nieuwe Freelancer" action="freelancer.new" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'new.freelancer'}"/>
+                    </h:panelGroup>
+
+                    <h:panelGroup rendered="#{page == 'Kandidaten'}">
+                        <h:commandLink value="Kandidaten" action="kandidaat" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'Kandidaten'}"/>
+
+                        <h:commandLink value="Nieuwe Kandidaat" action="kandidaat.new" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'new.kandidaat'}"/>
+                    </h:panelGroup>
+
+                    <h:panelGroup rendered="#{page == 'Contacten'}">
+                        <h:commandLink value="Contacten" action="contact" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'Contacten'}"/>
+
+                        <h:commandLink value="Nieuwe Contactpersoon" action="contact.new" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'new.contact'}"/>
+                    </h:panelGroup>
+
+                    <h:panelGroup rendered="#{page == 'Klanten'}">
+                        <h:commandLink value="Klanten" action="klant" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'Klanten'}"/>
+
+                        <h:commandLink value="Nieuwe Klant" action="klant.new" immediate="true"
+                                       styleClass="menu2active" disabled="#{subPage == 'new.klant'}"/>
+                    </h:panelGroup>
+
+				</h:panelGroup>
+
+			</div>
+			</h:form>
+		</div>
+
+	</ui:composition>
+</html>

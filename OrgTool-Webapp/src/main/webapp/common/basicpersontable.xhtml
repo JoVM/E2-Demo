@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:t="http://myfaces.apache.org/tomahawk"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" >
+
+
+<ui:composition>
+    <br/>
+    <h:form id="tableForm" >
+        <rich:dataTable value="#{persoonList}" var="klant" styleClass="fullWidth" id = "personTable"  >
+            <f:facet name="header">
+                <rich:columnGroup >
+                    <rich:column breakRowBefore="true" sortOrder="#{klant.naam}" sortBy="#{klant.naam}"  >
+                        <h:outputText value="Naam"/>
+                    </rich:column>
+                    <rich:column >
+                        <h:outputText value="Hoedanigheid"/>
+                    </rich:column>
+                    <rich:column rendered = "false">
+                        <h:outputText value="... Reserved ...."/>
+                        <!--TODO: extra acties voor persoontypes (move, klant, .... ) -->
+                    </rich:column>
+                    <rich:column >
+                        <h:outputText value="Actions"/>
+                    </rich:column>
+
+                </rich:columnGroup>
+            </f:facet>
+
+            <!--<rich:subTable rowKeyVar="rowKey">-->
+            <rich:column sortBy="#{klant.naam}" rendered="true" >
+                <h:outputText value="#{klant.naam} #{klant.voornaam}"/>
+            </rich:column>
+
+            <rich:column>
+                <h:outputText value="#{klant.persoonType}"/>
+            </rich:column>
+
+            <rich:column rendered="false">
+                <h:outputText value=".. Reserved for future use"/>
+            </rich:column>
+
+            <rich:column >
+                <a4j:commandButton id = "historyButton" image="/images/history_icon.png" action="#{personBean.showHistory(klant)}" >
+                    <rich:tooltip for = "historyButton" value="Show history" layout="block" mode="ajax">Show history</rich:tooltip>
+                </a4j:commandButton>
+                <a4j:commandButton id = "editButton" image="/images/edit-user-icon.png" action="#{personBean.editPersoon(klant)}" >
+                    <rich:tooltip for = "editButton" value="Edit Person" layout="block" mode="ajax">Edit Person</rich:tooltip>
+                </a4j:commandButton>
+                <a4j:commandButton id = "deleteButton" image="/images/remove_user.png" execute="@All" action="#{personBean.deletePerson(klant)}"
+                        render="@form :personTable :simpleHeaderMessages" >
+                    <!--<a4j:ajax render="@form :tableForm :content :personTable" execute="@form" />-->
+                    <rich:tooltip  value="Delete Person" layout="block" mode="ajax">Delete Person</rich:tooltip>
+                </a4j:commandButton>
+                <!--<h:commandButton id = "deleteButton2" image="/images/remove_user.png" action="#{personBean.deletePerson(persoon)}">-->
+                <!--</h:commandButton>-->
+            </rich:column>
+
+
+            <!--</rich:subTable>-->
+
+        </rich:dataTable>
+
+        <!--<a4j:keepAlive beanName="personBean"/>-->
+
+        <!--<rich:tree style="width:250px; margin-top:5px; margin-bottom: 5px;" nodeSelectListener="#{personBean.processSelection}"-->
+                   <!--ajaxSubmitSelection="true"  switchType="client"-->
+                   <!--value="#{personBean.treeNode}" var="item" ajaxKeys="#{null}" toggleOnClick="true" rendered="true" />-->
+
+
+    </h:form>
+</ui:composition>
+
+</html>
+

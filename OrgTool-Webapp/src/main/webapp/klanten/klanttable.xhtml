@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:t="http://myfaces.apache.org/tomahawk"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" xmlns:j="http://java.sun.com/jsp/jstl/functions">
+
+
+
+<ui:composition>
+    <br/>
+    <h:form id="tableForm" >
+        <rich:dataTable value="#{klantList}" var="klant" styleClass="fullWidth" id ="klantTable" rowClass="rowStyle"  >
+
+            <rich:column sortBy="#{klant.naam}" filterValue="#{klantBean.nameFilter}" filterExpression="#{j:containsIgnoreCase(klant.naam,klantBean.nameFilter)}"   >
+                <f:facet name="header">
+                    <h:panelGroup>
+                        <!--<h:outputText value="Naam "/><br/>-->
+                        <h:outputText value="Filter op naam: "/>
+                        <h:inputText value="#{klantBean.nameFilter}">
+                            <a4j:ajax event="change" render="@form :personTable :simpleHeaderMessages" execute="@this"/>
+                        </h:inputText>
+                        <a4j:commandButton id="filterButton" image="/images/tick_16.png" execute="@this" render="@form :klantTable :simpleHeaderMessages"/><h:outputText value="&#160;" />
+                        <a4j:commandButton id="clearButton" image="/images/close_16.png" action="#{klantBean.clearNameFilter}" execute="@this" render="@form :klantTable :simpleHeaderMessages"/>
+                    </h:panelGroup>
+
+                </f:facet>
+                <h:outputText value="#{klant.naam} "/>
+            </rich:column>
+
+            <rich:column >
+                <f:facet name="header">
+                    <h:outputText value="Adres"/>
+                </f:facet>
+                <h:outputText value="#{klant.adres}" />
+            </rich:column>
+
+            <rich:column  >
+                <f:facet name="header">
+                    <h:outputText value="Actions"/>
+                </f:facet>
+
+                <!--<a4j:commandButton id = "historyButton" image="/images/history_icon.png" action="#{personBean.showHistory(klant)}"  >-->
+                    <!--<rich:tooltip for = "historyButton" value="Show history" layout="block" mode="ajax">Show history</rich:tooltip>-->
+                <!--</a4j:commandButton>-->
+
+                <a4j:commandButton id = "editButton" image="/images/edit-user-icon.png" action="#{klantBean.editKlant(klant)}" >
+                    <rich:tooltip for = "editButton" value="Edit Person" layout="block" mode="ajax">Edit Klant</rich:tooltip>
+                </a4j:commandButton>
+                <a4j:commandButton id = "deleteButton" image="/images/remove_user.png" execute="@All" action="#{klantBean.deleteKlant(klant)}"
+                        render="@form :klantTable :simpleHeaderMessages" >
+                    <rich:tooltip  value="Delete Klant" layout="block" mode="ajax">Delete Person</rich:tooltip>
+                </a4j:commandButton>
+            </rich:column>
+
+
+        </rich:dataTable>
+
+
+    </h:form>
+</ui:composition>
+
+</html>
+

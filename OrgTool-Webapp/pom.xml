@@ -1,0 +1,200 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>OrganisationTool</artifactId>
+        <groupId>be.e2partners</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>OrgTool-Webapp</artifactId>
+    <packaging>war</packaging>
+    <name>OrgTool-Webapp Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <dependencies>
+
+        <!-- Own modules -->
+        <dependency>
+            <groupId>be.e2partners</groupId>
+            <artifactId>OrgTool-Persistence</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+
+        <!-- Foreign libraries -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-api</artifactId>
+            <version>${myfaces.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-impl</artifactId>
+            <version>${myfaces.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.myfaces.tomahawk</groupId>
+            <artifactId>tomahawk21</artifactId>
+            <version>1.1.14</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-components-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.core</groupId>
+            <artifactId>richfaces-core-impl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.el</groupId>
+            <artifactId>jboss-el</artifactId>
+            <version>${jboss-el.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>el-api</artifactId>
+            <scope>provided</scope>
+            <version>2.2.1-b04</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>javax.inject</groupId>-->
+            <!--<artifactId>javax.inject</artifactId>-->
+            <!--<version>1</version>-->
+        <!--</dependency>-->
+
+
+        <!-- LOGGING -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sun.jdmk</groupId>
+                    <artifactId>jmxtools</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.jmx</groupId>
+                    <artifactId>jmxri</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.jms</groupId>
+                    <artifactId>jms</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.mail</groupId>
+                    <artifactId>mail</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.activation</groupId>
+                    <artifactId>activation</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <finalName>OrganisationTool</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/META-INF</directory>
+                <targetPath>META-INF</targetPath>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tomcat-maven-plugin</artifactId>
+                <configuration>
+                    <url>http://6550b-2:8050/manager</url>
+                    <server>tomcat</server>
+                    <path>/OrganisationTool</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+    <properties>
+        <!-- Application settings -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <myfaces.version>2.1.10</myfaces.version>
+        <tomahawk.version>1.1.14</tomahawk.version>
+        <!--<richfaces.version>3.3.3.Final</richfaces.version>-->
+        <jstl.version>1.2</jstl.version>
+        <!--<facelets.version>1.1.14</facelets.version>-->
+        <jsp-api.version>2.1</jsp-api.version>
+        <jboss-el.version>2.0.1.GA</jboss-el.version>
+
+
+
+        <hibernate.version>3.3.2.GA</hibernate.version>
+        <hibernate-annotations.version>3.4.0.GA</hibernate-annotations.version>
+        <hibernate-entitymanager.version>3.4.0.GA</hibernate-entitymanager.version>
+        <javassist.version>3.8.0.GA</javassist.version>
+
+        <!--<org.richfaces.bom.version>4.1.0.Final</org.richfaces.bom.version>-->
+        <org.richfaces.bom.version>4.3.1.Final</org.richfaces.bom.version>
+
+
+    </properties>
+
+
+
+
+</project>

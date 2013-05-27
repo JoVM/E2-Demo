@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet author="peeteth (generated)" id="1369209904300-1">
+        <createTable tableName="hibernate_sequences">
+            <column name="sequence_name" type="VARCHAR(255)"/>
+            <column name="sequence_next_hi_value" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="peeteth (generated)" id="1369209904300-2">
+        <createTable tableName="klant">
+            <column autoIncrement="true" name="klant_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="naam" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="peeteth (generated)" id="1369209904300-3">
+        <createTable tableName="klantpersonen">
+            <column name="klant_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="persoon_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="peeteth (generated)" id="1369209904300-4">
+        <createTable tableName="persoon">
+            <column name="persoontype_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="naam" type="VARCHAR(255)"/>
+            <column name="persoonType" type="INT"/>
+            <column name="voornaam" type="VARCHAR(255)"/>
+            <column name="begindatum" type="DATETIME"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="peeteth (generated)" id="1369209904300-5">
+        <createTable tableName="persoonhistory">
+            <column name="history_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="date_from" type="DATETIME"/>
+            <column name="date_to" type="DATETIME"/>
+            <column name="persoon_id" type="BIGINT"/>
+            <column name="persoontype_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="peeteth (generated)" id="1369209904300-6">
+        <addForeignKeyConstraint baseColumnNames="klant_id" baseTableName="klantpersonen" baseTableSchemaName="e2p_orga" constraintName="FK9B5845A46FC1139B" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="klant_id" referencedTableName="klant" referencedTableSchemaName="e2p_orga" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="peeteth (generated)" id="1369209904300-7">
+        <addForeignKeyConstraint baseColumnNames="persoon_id" baseTableName="klantpersonen" baseTableSchemaName="e2p_orga" constraintName="FK9B5845A41FA8721B" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="persoon" referencedTableSchemaName="e2p_orga" referencesUniqueColumn="false"/>
+    </changeSet>
+	<changeSet author="peeteth (generated)" id="1369209904300-8" >
+        <addForeignKeyConstraint baseColumnNames="persoon_id, persoontype_id" baseTableName="persoonhistory" baseTableSchemaName="e2p_orga" constraintName="persoonhistory_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id, persoonType" referencedTableName="persoon" referencedTableSchemaName="e2p_orga" referencesUniqueColumn="false"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" xmlns:t="http://myfaces.apache.org/tomahawk">
+
+<!--<f:loadBundle basename="ApplicationResources" var="messages" />-->
+
+<f:view>
+    <h:head>
+
+        <ui:insert name="head"/>
+        <t:stylesheet path="/css/style.css" />
+        <title>Error</title>
+    </h:head>
+    <body>
+    <div id="outerWrapper">
+        <div id="innerWrapper">
+
+            <div id="content-container">
+                <div id="messages">
+                    <h:messages id="simpleHeaderMessages" rendered="#{!dontRenderMessages}"
+                                errorClass="error" fatalClass="error" warnClass="warn"
+                                infoClass="info" showDetail="true" showSummary="false" />
+                </div>
+                <div id="content">
+                    <h:form>
+                        <div id="expired">
+                            <p>The session is expired, reload the application</p>
+                            <h:commandLink value="Reload application here " action="#{reloadBean.reload}"/>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</f:view>
+</html>

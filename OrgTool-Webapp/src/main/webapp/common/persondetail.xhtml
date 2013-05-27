@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" xmlns:t="http://myfaces.apache.org/tomahawk">
+
+
+<ui:composition>
+
+    <rich:panel id="panelContainer">
+        <h:panelGrid columns="1" id="personPanel">
+            <h:form id="personForm" >
+                <h:panelGrid columns="2" id="basicPersonPanel">
+                    <h:outputLabel for="naamField" value="Naam: " id="naamLabel"/>
+                    <h:inputText value="#{persoon.naam}" id="naamField" label="naamLabel"/>
+                    <h:outputLabel for="voornaamField" value="Voornaam: " id="voornaamLabel"/>
+                    <h:inputText value="#{persoon.voornaam}" id="voornaamField" label="voornaamLabel"/>
+
+                    <h:outputLabel for="personTypeCombo" value="Type: "/>
+                    <rich:select value="#{personBean.currentPersonType}" id="personTypeCombo" onchange="#{personBean.switchPerson()}"  >
+                        <f:selectItems value="#{personBean.persoonTypes}" />
+                        <a4j:ajax event="selectitem" execute="@form" render="@form :panelContainer :personPanel :personForm" limitRender="true" immediate="false" />
+                    </rich:select>
+                </h:panelGrid>
+                <h:panelGrid columns="2" id="medewerkerPanel" rendered="#{personBean.medewerkerRendered}">
+                    <h:outputLabel for="beginDatumField" value="Begindatum"/>
+                    <rich:calendar value="#{persoon.beginDatum}" id="beginDatumField" />
+
+                </h:panelGrid>
+
+                <a4j:commandButton value="Submit" action="#{personBean.submit}" execute="@form" render="@form :panelContainer :personPanel :personForm" limitRender="true"  >
+                    <!--<a4j:ajax execute="@form"  />-->
+                </a4j:commandButton>
+                <!--<a4j:keepAlive beanName="personBean"/>-->
+                <!--<t:saveState value="personBean"/>-->
+
+            </h:form>
+
+        </h:panelGrid>
+    </rich:panel>
+
+
+</ui:composition>
+
+</html>
+

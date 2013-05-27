@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Attempts/Attempts.iml" filepath="$PROJECT_DIR$/Attempts/Attempts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrgTool-Domain/OrgTool-Domain.iml" filepath="$PROJECT_DIR$/OrgTool-Domain/OrgTool-Domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrgTool-Persistence/OrgTool-Persistence.iml" filepath="$PROJECT_DIR$/OrgTool-Persistence/OrgTool-Persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrgTool-Webapp/OrgTool-Webapp.iml" filepath="$PROJECT_DIR$/OrgTool-Webapp/OrgTool-Webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrganisationTool.iml" filepath="$PROJECT_DIR$/OrganisationTool.iml" />
+    </modules>
+  </component>
+</project>
+

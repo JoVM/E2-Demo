@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+        version="2.1">
+
+    <!-- NAVIGATION -->
+    <application>
+        <!--<view-handler>com.sun.facelets.FaceletViewHandler</view-handler>-->
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+    </application>
+
+
+    <!-- navigation rules -->
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>home</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <!-- USER -->
+        <navigation-case>
+            <from-outcome>noRights</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>newEntity</from-outcome>
+            <to-view-id>/home/newentity.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+
+        <!--Medewerker-->
+        <navigation-case>
+            <from-outcome>medewerker</from-outcome>
+            <to-view-id>/medewerkers/medewerker.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>medewerker.new</from-outcome>
+            <to-view-id>/medewerkers/medewerker-new.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>freelancer</from-outcome>
+            <to-view-id>/freelancers/freelancer.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>freelancer.new</from-outcome>
+            <to-view-id>/freelancers/freelancer-new.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>kandidaat</from-outcome>
+            <to-view-id>/kandidaten/kandidaat.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>kandidaat.new</from-outcome>
+            <to-view-id>/kandidaten/kandidaat-new.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>contact</from-outcome>
+            <to-view-id>/contacts/contact.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>contact.new</from-outcome>
+            <to-view-id>/contacts/contact-new.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>klant</from-outcome>
+            <to-view-id>/klanten/klant.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>klant.new</from-outcome>
+            <to-view-id>/klanten/klant-new.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>klant.edit</from-outcome>
+            <to-view-id>/klanten/editklant.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+
+        <navigation-case>
+            <from-outcome>history</from-outcome>
+            <to-view-id>/medewerkers/medewerker.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>edit.persoon</from-outcome>
+            <to-view-id>/common/editperson.xhtml</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+</faces-config>

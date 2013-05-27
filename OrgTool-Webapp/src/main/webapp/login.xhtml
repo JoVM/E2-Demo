@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">-->
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<!--<f:loadBundle basename="ApplicationResources" var="messages" />-->
+
+	<f:view>
+		<head>
+            <title>
+                <h:outputText value="login" />
+                <ui:insert name="pageTitle" />
+            </title>
+
+		<t:stylesheet path="css/style.css" />
+		
+		<!--<link rel="icon" type="image/png"-->
+			<!--href="#{request.contextPath}/images/icon.ico" />-->
+		</head>
+
+		<body>
+
+		<div id="outerWrapper">
+		<div id="innerWrapper">
+		<ui:include src="template/header.xhtml" />
+		
+		<a4j:status
+			onstart="#{rich:component('wait')}.show()"
+			onstop="#{rich:component('wait')}.hide()" />
+            <rich:popupPanel
+                    id="wait" autosized="true" width="200" height="120" moveable="false"
+                    resizeable="false">
+                <f:facet name="header">
+                    <h:outputText value="working" />
+                </f:facet>
+                <h:outputText value="..." />
+            </rich:popupPanel>
+		<div id="content-container">
+		<div id="content">
+        	<!--<h:form id="loginForm" prependId="false">-->
+            <form method="post" action="j_security_check" name="loginForm">
+				<table>
+
+					<tr>
+						<td><h:outputText value="Username:" /></td>
+						<td><h:inputText id="j_username" required="true"
+							requiredMessage="Username is required" /></td>
+						<td><rich:message for="j_username" styleClass="error" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Password:" /></td>
+						<td><h:inputSecret id="j_password" required="true"
+							requiredMessage="Password is required" /></td>
+						<td><rich:message for="j_password" styleClass="error" /></td>
+					</tr>
+					<tr>
+						<!--<td>&nbsp;</td>-->
+						<!--<td><h:commandButton type="submit" id="login"-->
+							<!--action="#{authenticationBean.doLogin}" value="Login" /></td>-->
+                        <td><h:commandButton type="submit" id="login"
+                                              value="Login" /></td>
+						
+						<!--<td>&nbsp;</td>-->
+					</tr>
+					<tr>
+					 <!--<td>&nbsp;</td>-->
+					 <td colspan="1">
+						<h:outputText rendered="#{not empty ORGTOOL_LOGIN_ERROR}"
+							value="#{ORGTOOL_LOGIN_ERROR}" styleClass="error"/>
+		                <!--<rich:message for="login" styleClass="error" />-->
+                        <!--<rich:messages layout="table" globalOnly="true" tooltip="true" showDetail="true" showSummary="true" styleClass="error" />-->
+		             </td>
+	                </tr>
+				</table>
+            </form>
+			<!--</h:form>-->
+		</div>
+		</div>
+		</div>
+		</div>
+		</body>
+	</f:view>
+</html>
