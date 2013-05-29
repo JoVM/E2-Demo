@@ -12,10 +12,10 @@
 <ui:composition>
     <br/>
     <h:form id="tableForm" >
-        <rich:dataTable value="#{persoonList}" var="klant" styleClass="fullWidth" id = "personTable"  >
+        <rich:dataTable value="#{persoonList}" var="persoon" styleClass="fullWidth" id = "personTable"  >
             <f:facet name="header">
                 <rich:columnGroup >
-                    <rich:column breakRowBefore="true" sortOrder="#{klant.naam}" sortBy="#{klant.naam}"  >
+                    <rich:column breakRowBefore="true" sortOrder="#{persoon.naam}" sortBy="#{persoon.naam}"  >
                         <h:outputText value="Naam"/>
                     </rich:column>
                     <rich:column >
@@ -33,12 +33,12 @@
             </f:facet>
 
             <!--<rich:subTable rowKeyVar="rowKey">-->
-            <rich:column sortBy="#{klant.naam}" rendered="true" >
-                <h:outputText value="#{klant.naam} #{klant.voornaam}"/>
+            <rich:column sortBy="#{persoon.naam}" rendered="true" >
+                <h:outputText value="#{persoon.naam} #{persoon.voornaam}"/>
             </rich:column>
 
             <rich:column>
-                <h:outputText value="#{klant.persoonType}"/>
+                <h:outputText value="#{persoon.persoonType}"/>
             </rich:column>
 
             <rich:column rendered="false">
@@ -46,13 +46,13 @@
             </rich:column>
 
             <rich:column >
-                <a4j:commandButton id = "historyButton" image="/images/history_icon.png" action="#{personBean.showHistory(klant)}" >
+                <a4j:commandButton id = "historyButton" image="/images/history_icon.png" action="#{personBean.manageCVs(persoon)}" >
                     <rich:tooltip for = "historyButton" value="Show history" layout="block" mode="ajax">Show history</rich:tooltip>
                 </a4j:commandButton>
-                <a4j:commandButton id = "editButton" image="/images/edit-user-icon.png" action="#{personBean.editPersoon(klant)}" >
+                <a4j:commandButton id = "editButton" image="/images/edit-user-icon.png" action="#{personBean.editPersoon(persoon)}" >
                     <rich:tooltip for = "editButton" value="Edit Person" layout="block" mode="ajax">Edit Person</rich:tooltip>
                 </a4j:commandButton>
-                <a4j:commandButton id = "deleteButton" image="/images/remove_user.png" execute="@All" action="#{personBean.deletePerson(klant)}"
+                <a4j:commandButton id = "deleteButton" image="/images/remove_user.png" execute="@All" action="#{personBean.deletePerson(persoon)}"
                         render="@form :personTable :simpleHeaderMessages" >
                     <!--<a4j:ajax render="@form :tableForm :content :personTable" execute="@form" />-->
                     <rich:tooltip  value="Delete Person" layout="block" mode="ajax">Delete Person</rich:tooltip>

@@ -24,6 +24,7 @@
                         <a4j:ajax event="selectitem" execute="@form" render="@form :panelContainer :personPanel :personForm" limitRender="true" immediate="false" />
                     </rich:select>
                 </h:panelGrid>
+
                 <h:panelGrid columns="2" id="medewerkerPanel" rendered="#{personBean.medewerkerRendered}">
                     <h:outputLabel for="beginDatumField" value="Begindatum"/>
                     <rich:calendar value="#{persoon.beginDatum}" id="beginDatumField" />

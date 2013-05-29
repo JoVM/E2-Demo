@@ -26,7 +26,7 @@ public class HistoryBean {
     @Autowired
     private PersoonService persoonService;
 
-    public List<PersoonGeschiedenis> getGeschiedenis(Persoon persoon){
-        return persoonService.getPersoonGeschiedenis(persoon.getId());
-    }
+//    public List<PersoonGeschiedenis> getGeschiedenis(Persoon persoon){
+//        return persoonService.getPersoonGeschiedenis(persoon.getId());
+//    }
 }

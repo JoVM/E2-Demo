@@ -1,6 +1,7 @@
 package be.e2partners.integration;
 
 import be.e2partners.domain.*;
+import be.e2partners.persistence.PersoonDocumentsDao;
 import be.e2partners.persistence.service.KlantService;
 import be.e2partners.persistence.service.PersoonService;
 import org.junit.After;
@@ -14,7 +15,10 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Set;
 
 import static junit.framework.Assert.*;
 
@@ -81,13 +85,13 @@ public class PersoonServiceIntegratieTest implements ApplicationContextAware{
     public void testService(){
 
         Persoon medew = pService.createPersoon(medewerker);
-        List<PersoonGeschiedenis> history = pService.getPersoonGeschiedenis(medew.getId());
+        Set<PersoonGeschiedenis> history = medew.getPersoonGeschiedenis();
         assertTrue(history.size() > 0);
 
         medewerker.setVoornaam("Frans");
-        pService.update(medewerker);
+        medew = pService.update(medewerker);
         assertTrue(pService.getById(medewerker.getId()).getVoornaam().equals("Frans"));
-        history = pService.getPersoonGeschiedenis(medew.getId());
+        history = medew.getPersoonGeschiedenis();
         assertTrue(history.size() > 1); //new entry because of update
 
         pService.createPersoon(kan);
@@ -113,14 +117,42 @@ public class PersoonServiceIntegratieTest implements ApplicationContextAware{
             }
         }
 
+
+
         PersoonGeschiedenis persoonGeschiedenis = new PersoonGeschiedenis();
-        persoonGeschiedenis.setPersoonId(medewerker.getId());
+        persoonGeschiedenis.setPersoon(medewerker);
         persoonGeschiedenis.setPersoonTypeId(medewerker.getPersoonType().getTypeId());
         persoonGeschiedenis.setKlant(klant);
 
-        pService.addPersoonGeschiedenis(persoonGeschiedenis);
+        medewerker.addPersoonGeschiedenis(persoonGeschiedenis);
+        pService.update(medewerker);
+
+        testDocumentContent();
+
+    }
 
 
+    public void testDocumentContent(){
+
+        try {
+            InputStream inputStream = getClass().getResourceAsStream("/be.e2partners.integration/testdoc.docx");
+            byte[] bytes = new byte[inputStream.available()];
+
+            inputStream.read(bytes);
+            inputStream.close();
+
+            PersoonDocument document = new PersoonDocument();
+            document.setContent(bytes);
+
+            medewerker.addDocument(document);
+
+            pService.update(medewerker);
+
+
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -134,6 +166,8 @@ public class PersoonServiceIntegratieTest implements ApplicationContextAware{
         pService.deleteById(free);
 
         pService.deleteById(cont);
+
+
 
         klantService.delete(klant);
     }

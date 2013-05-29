@@ -18,7 +18,7 @@ import java.util.List;
 public class Klant implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "klant_id")
     protected Long id;
 
@@ -26,7 +26,7 @@ public class Klant implements Serializable {
 
     private String adres;
 
-    @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinTable(name = "klantpersonen", joinColumns = {@JoinColumn(name = "klant_id")}, inverseJoinColumns = {@JoinColumn(name = "persoon_id")})
     private List<Persoon> relatedPersons;
 

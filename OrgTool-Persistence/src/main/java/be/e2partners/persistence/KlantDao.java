@@ -9,4 +9,7 @@ import be.e2partners.domain.Klant;
  * Time: 13:52
  */
 public interface KlantDao extends GenericDao<Klant,Long> {
+
+    public boolean removeKlantPersonen(Klant klant);
+
 }

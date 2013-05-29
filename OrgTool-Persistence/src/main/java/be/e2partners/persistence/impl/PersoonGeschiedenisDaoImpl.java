@@ -35,7 +35,7 @@ public class PersoonGeschiedenisDaoImpl extends GenericHibernateDaoImpl<PersoonG
      */
     public PersoonGeschiedenis create(PersoonGeschiedenis entity) {
 
-        List<PersoonGeschiedenis> geschiedenis = getGeschiedenisPerPersoon(entity.getPersoonId());
+        List<PersoonGeschiedenis> geschiedenis = getGeschiedenisPerPersoon(entity.getPersoon().getId());
         if(geschiedenis != null && geschiedenis.size() > 0) {
             for (int i = geschiedenis.size() - 1; i >= 0; i--) {
                 PersoonGeschiedenis pg = geschiedenis.get(i);

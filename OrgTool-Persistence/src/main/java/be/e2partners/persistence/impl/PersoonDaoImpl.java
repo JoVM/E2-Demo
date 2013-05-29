@@ -40,4 +40,6 @@ public class PersoonDaoImpl extends GenericHibernateDaoImpl<Persoon,Long> implem
 
         return query.getResultList();
     }
+
+
 }

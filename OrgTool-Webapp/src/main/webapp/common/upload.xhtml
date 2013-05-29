@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" xmlns:t="http://myfaces.apache.org/tomahawk">
+
+<ui:composition>
+    <h:outputText value = "Upload new file (CV)"/><br/>
+    <h:form id="uploadForm" enctype="multipart/form-data">
+        <t:inputFileUpload value="#{uploadBean.uploadedFile}" />
+        <h:commandButton value="Upload" action="#{uploadBean.submit(persoon)}"  />
+    </h:form>
+
+    <br/>
+
+</ui:composition>
+
+
+</html>

@@ -38,6 +38,7 @@ public class KlantServiceImpl implements KlantService {
 
     @Override
     public boolean delete(Klant klant) {
+
         klantDao.delete(klant);
         return true;  //otherwise an exception is thrown ??
     }

@@ -93,8 +93,9 @@
 
 
         <navigation-case>
-            <from-outcome>history</from-outcome>
-            <to-view-id>/medewerkers/medewerker.xhtml</to-view-id>
+            <from-outcome>medewerkers-detail</from-outcome>
+            <to-view-id>/medewerkers/medewerkers-detail.xhtml</to-view-id>
+            <redirect/>
         </navigation-case>
 
         <navigation-case>

@@ -2,6 +2,7 @@ package be.e2partners.persistence.service;
 
 import be.e2partners.domain.*;
 import be.e2partners.persistence.PersoonDao;
+import be.e2partners.persistence.PersoonDocumentsDao;
 import be.e2partners.persistence.PersoonGeschiedenisDao;
 import org.apache.commons.lang.Validate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,22 +27,28 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
     @Autowired
     private PersoonDao persoonDao;
 
+//    @Autowired
+//    private PersoonGeschiedenisDao persoonGeschiedenisDao;
+
     @Autowired
-    private PersoonGeschiedenisDao persoonGeschiedenisDao;
+    private PersoonDocumentsDao persoonDocumentsDao;
 
 
     @Override
     public Persoon createPersoon(Persoon persoon) {
         Validate.notNull(persoon,"Een persoon kan niet null zijn wanneer deze wordt gepersisteerd");
 
-        Persoon persisted = persoonDao.create(persoon);
 
         PersoonGeschiedenis pg = new PersoonGeschiedenis();
-        pg.setPersoonId(persisted.getId());
+        Persoon persisted = persoonDao.create(persoon);
+        pg.setPersoon(persisted);
         pg.setPersoonTypeId(persisted.getPersoonType().getTypeId());
         pg.setEntryDate(new Date());
 
-        persoonGeschiedenisDao.create(pg);
+        persisted.addPersoonGeschiedenis(pg);
+        persoonDao.update(persisted);
+
+//        persoonGeschiedenisDao.create(pg);
 
         return persisted;
 
@@ -65,24 +72,29 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
     @Override
     public Persoon update(Persoon persoon) {
         Validate.notNull(persoon,"Een persoon kan niet null zijn wanneer deze wordt gepersisteerd");
-        Persoon persisted = persoonDao.update(persoon);
 
 
         PersoonGeschiedenis pg = new PersoonGeschiedenis();
-        pg.setPersoonId(persisted.getId());
-        pg.setPersoonTypeId(persisted.getPersoonType().getTypeId());
+        pg.setPersoon(persoon);
+        pg.setPersoonTypeId(persoon.getPersoonType().getTypeId());
         pg.setEntryDate(new Date());
 
-        persoonGeschiedenisDao.create(pg);
+        persoon.addPersoonGeschiedenis(pg);
+
+        Persoon persisted = persoonDao.update(persoon);
+
+
+
+//        persoonGeschiedenisDao.create(pg);
 
         return persisted;
 
     }
 
-    @Override
-    public List<PersoonGeschiedenis> getPersoonGeschiedenis(Long id) {
-        return persoonGeschiedenisDao.getGeschiedenisPerPersoon(id);
-    }
+//    @Override
+//    public List<PersoonGeschiedenis> getPersoonGeschiedenis(Long id) {
+//        return persoonGeschiedenisDao.getGeschiedenisPerPersoon(id);
+//    }
 
     @Override
     public List<Persoon> getAllPersons() {
@@ -94,9 +106,20 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
         return persoonDao.getSpecificList(type);
     }
 
+//    @Override
+//    public void addPersoonGeschiedenis(PersoonGeschiedenis geschiedenis) {
+//        persoonGeschiedenisDao.create(geschiedenis);
+//    }
+
     @Override
-    public void addPersoonGeschiedenis(PersoonGeschiedenis geschiedenis) {
-        persoonGeschiedenisDao.create(geschiedenis);
+    public PersoonDocument createDocument(PersoonDocument document) {
+        return persoonDocumentsDao.create(document);
+    }
+
+    @Override
+    public boolean deleteDocumentById(PersoonDocument document) {
+        persoonDocumentsDao.delete(document);
+        return true;
     }
 
     @Override

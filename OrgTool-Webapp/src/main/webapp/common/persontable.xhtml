@@ -13,10 +13,10 @@
 <ui:composition>
     <br/>
     <h:form id="tableForm" >
-        <rich:dataTable value="#{persoonList}" var="klant" styleClass="fullWidth" id = "personTable" rowClass="rowStyle"  >
+        <rich:dataTable value="#{persoonList}" var="persoon" styleClass="fullWidth" id = "personTable" rowClass="rowStyle"  >
 
             <!--<rich:subTable rowKeyVar="rowKey">-->
-            <rich:column sortBy="#{klant.naam}" filterValue="#{personBean.nameFilter}" filterExpression="#{j:containsIgnoreCase(klant.naam,personBean.nameFilter)}"   >
+            <rich:column sortBy="#{persoon.naam}" filterValue="#{personBean.nameFilter}" filterExpression="#{j:containsIgnoreCase(persoon.naam,personBean.nameFilter)}"   >
                 <f:facet name="header">
                     <h:panelGroup>
                         <!--<h:outputText value="Naam "/><br/>-->
@@ -29,14 +29,14 @@
                     </h:panelGroup>
 
                 </f:facet>
-                <h:outputText value="#{klant.naam} #{klant.voornaam}"/>
+                <h:outputText value="#{persoon.naam} #{persoon.voornaam}"/>
             </rich:column>
 
             <rich:column >
                 <f:facet name="header">
                     <h:outputText value="Hoedanigheid"/>
                 </f:facet>
-                <h:outputText value="#{klant.persoonType}" />
+                <h:outputText value="#{persoon.persoonType}" />
             </rich:column>
 
             <!--<rich:column rendered="false" width="200px">-->
@@ -47,31 +47,22 @@
                 <f:facet name="header">
                     <h:outputText value="Actions"/>
                 </f:facet>
-                <a4j:commandButton id = "historyButton" image="/images/history_icon.png" action="#{personBean.showHistory(klant)}"  >
-                    <rich:tooltip for = "historyButton" value="Show history" layout="block" mode="ajax">Show history</rich:tooltip>
+                <a4j:commandButton id = "cvButton" image="/images/files_icon.png" action="#{personBean.manageCVs(persoon)}" rendered="#{persoon.persoonType eq 'MEDEWERKER'}"  >
+                    <rich:tooltip for = "cvButton" value="Advanced" layout="block" mode="ajax">Advanced</rich:tooltip>
                 </a4j:commandButton>
-                <a4j:commandButton id = "editButton" image="/images/edit-user-icon.png" action="#{personBean.editPersoon(klant)}" >
+                <a4j:commandButton id = "editButton" image="/images/edit-user-icon.png" action="#{personBean.editPersoon(persoon)}" >
                     <rich:tooltip for = "editButton" value="Edit Person" layout="block" mode="ajax">Edit Person</rich:tooltip>
                 </a4j:commandButton>
-                <a4j:commandButton id = "deleteButton" image="/images/remove_user.png" execute="@All" action="#{personBean.deletePerson(klant)}"
+                <a4j:commandButton id = "deleteButton" image="/images/remove_user.png" execute="@All" action="#{personBean.deletePerson(persoon)}"
                         render="@form :personTable :simpleHeaderMessages" >
                     <!--<a4j:ajax render="@form :tableForm :content :personTable" execute="@form" />-->
                     <rich:tooltip  value="Delete Person" layout="block" mode="ajax">Delete Person</rich:tooltip>
                 </a4j:commandButton>
-                <!--<h:commandButton id = "deleteButton2" image="/images/remove_user.png" action="#{personBean.deletePerson(persoon)}">-->
-                <!--</h:commandButton>-->
             </rich:column>
 
 
-            <!--</rich:subTable>-->
 
         </rich:dataTable>
-
-        <!--<a4j:keepAlive beanName="personBean"/>-->
-
-        <!--<rich:tree style="width:250px; margin-top:5px; margin-bottom: 5px;" nodeSelectListener="#{personBean.processSelection}"-->
-                   <!--ajaxSubmitSelection="true"  switchType="client"-->
-                   <!--value="#{personBean.treeNode}" var="item" ajaxKeys="#{null}" toggleOnClick="true" rendered="true" />-->
 
 
     </h:form>

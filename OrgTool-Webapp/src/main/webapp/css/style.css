@@ -316,3 +316,13 @@ dl.rich-messages{
     width: 5em;
     padding: 15px;
 }
+
+.item-title {
+    color: #000000;
+    font-family: Tahoma, arial, sans-serif;
+    font-size: 14pt;
+    font-weight: normal;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+}

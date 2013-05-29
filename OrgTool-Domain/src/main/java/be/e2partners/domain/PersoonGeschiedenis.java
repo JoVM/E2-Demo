@@ -13,29 +13,30 @@ import javax.persistence.*;
 @Entity
 @Table(name = "persoonhistory")
 @NamedQueries( {
-		@NamedQuery(name = "geschiedenis.perpersoon", query = "select ph FROM PersoonGeschiedenis ph where ph.persoonId = :persoonId")
+		@NamedQuery(name = "geschiedenis.perpersoon", query = "select ph FROM PersoonGeschiedenis ph where ph.persoon = :persoonId")
 })
 public class PersoonGeschiedenis extends Geschiedenis {
 
 
-    @Column(name = "persoon_id")
-    private long persoonId;
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "id")
+    private Persoon persoon;
 
 
     @Column(name = "persoontype_id")
     private long persoonTypeId;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name="klant_id")
     private Klant klant;
 
 
-    public long getPersoonId() {
-        return persoonId;
+    public Persoon getPersoon() {
+        return persoon;
     }
 
-    public void setPersoonId(long persoonId) {
-        this.persoonId = persoonId;
+    public void setPersoon(Persoon persoon) {
+        this.persoon = persoon;
     }
 
     public long getPersoonTypeId() {

@@ -5,6 +5,8 @@ import be.e2partners.persistence.KlantDao;
 import be.e2partners.persistence.impl.GenericHibernateDaoImpl;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Query;
+
 /**
  * Created with IntelliJ IDEA.
  * User: peeteth
@@ -16,6 +18,23 @@ public class KlantDaoImpl extends GenericHibernateDaoImpl<Klant,Long> implements
 
     @Override
     public Klant create(Klant entity) {
-        return super.create(entity);    //To change body of overridden methods use File | Settings | File Templates.
+        return super.create(entity);
+    }
+
+    @Override
+    public boolean removeKlantPersonen(Klant klant) {
+
+        String deleteQry = "DELETE from klantpersonen where klant_id = :id";
+
+        Query query = getEntityManager().createNativeQuery(deleteQry);
+        query.setParameter("id",klant.getId());
+        query.executeUpdate();
+        return true;
+    }
+
+    @Override
+    public void delete(Klant entity) {
+        removeKlantPersonen(entity);
+        super.delete(entity);
     }
 }

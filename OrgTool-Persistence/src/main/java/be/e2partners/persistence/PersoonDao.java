@@ -16,4 +16,5 @@ public interface PersoonDao extends GenericDao<Persoon,Long> {
     public List<? extends Persoon> getSpecificList(PersoonType type);
 
 
+
 }

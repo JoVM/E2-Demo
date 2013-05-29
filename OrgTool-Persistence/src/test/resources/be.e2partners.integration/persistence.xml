@@ -15,6 +15,7 @@
         <class>be.e2partners.domain.Medewerker</class>
         <class>be.e2partners.domain.PersoonGeschiedenis</class>
         <class>be.e2partners.domain.Klant</class>
+        <class>be.e2partners.domain.PersoonDocument</class>
 
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
 

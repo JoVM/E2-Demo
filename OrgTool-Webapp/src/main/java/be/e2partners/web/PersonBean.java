@@ -16,6 +16,7 @@ import javax.faces.model.SelectItem;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 
 //import org.richfaces.component.html.HtmlTree;
@@ -77,13 +78,17 @@ public class PersonBean implements Serializable{
         return (List<ContactPersoon>) persoonService.getAllPersons(PersoonType.CONTACT);
     }
 
-    public String showHistory(Persoon persoon){
-        //TODO: kijk naar TreeNode in Richfaces.
+    public String manageCVs(Persoon persoon){
+        //TODO: rename
 
-        List<PersoonGeschiedenis> geschiedenis = persoonService.getPersoonGeschiedenis(persoon.getId());
-//        loadTree(geschiedenis);
-        //means of using a navigation rule.
-        return "history";
+        Set<PersoonGeschiedenis> geschiedenis = persoon.getPersoonGeschiedenis();
+        currentPerson = persoon;
+        currentPersonType = persoon.getPersoonType();
+        mode = "EDIT";
+        FacesContext.getCurrentInstance().getExternalContext().getApplicationMap().put("persoon",currentPerson);
+
+
+        return "medewerkers-detail";
     }
 
     public String editPersoon(Persoon persoon){

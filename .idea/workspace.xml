@@ -5,35 +5,88 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a13a9111-8295-4a91-b9c5-b5b4119f5135" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/images/files_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/test/resources/be.e2partners.integration/testdoc.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_annotations_3_5_6_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_2_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_2_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_1_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/PersoonDocument.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/PersoonDocumentsDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonDocumentsDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/UploadBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/doc-overview.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/medewerkers/medewerkers-detail.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/upload.xhtml" />
+      <change type="DELETED" beforePath="C:\DEV\projects\thomas\E2-Demo\data\db.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/HistoryBean.java" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/HistoryBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Klant.java" afterPath="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Klant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/KlantDao.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/KlantDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/KlantDaoImpl.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/KlantDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/impl/KlantServiceImpl.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/impl/KlantServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/KlantServiceIntegrationTest.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/KlantServiceIntegrationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Domain/OrgTool-Domain.iml" afterPath="$PROJECT_DIR$/OrgTool-Domain/OrgTool-Domain.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/OrgTool-Persistence.iml" afterPath="$PROJECT_DIR$/OrgTool-Persistence/OrgTool-Persistence.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/OrgTool-Webapp.iml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/OrgTool-Webapp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/OrgTool_Webapp_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/OrgTool_Webapp_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrganisationTool.iml" afterPath="$PROJECT_DIR$/OrganisationTool.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Persoon.java" afterPath="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Persoon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/PersoonDao.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/PersoonDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonDaoImpl.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/PersoonGeschiedenis.java" afterPath="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/PersoonGeschiedenis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonGeschiedenisDaoImpl.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonGeschiedenisDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/PersoonService.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/PersoonService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/PersoonServiceImpl.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/PersoonServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/basicpersontable.xhtml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/basicpersontable.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/sql/changes.xml" afterPath="$PROJECT_DIR$/OrgTool-Persistence/sql/changes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/sql/db.xml" afterPath="$PROJECT_DIR$/OrgTool-Persistence/sql/db.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/WEB-INF/faces-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klant.xhtml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klant.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klantdetail.xhtml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klantdetail.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Persistence/src/test/resources/be.e2partners.integration/persistence.xml" afterPath="$PROJECT_DIR$/OrgTool-Persistence/src/test/resources/be.e2partners.integration/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/persondetail.xhtml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/persondetail.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/persontable.xhtml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/persontable.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OrganisationTool.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.dummy" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369225172658" ignored="false" />
     <file path="/dbsettings.properties" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1367583398587" ignored="false" />
-    <file path="/style.css" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368695602098" ignored="false" />
+    <file path="/style.css" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369732032375" ignored="false" />
     <file path="/crowd.properties" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1367584758089" ignored="false" />
     <file path="/header.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368191602724" ignored="false" />
-    <file path="/PersonBean.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369647125264" ignored="false" />
-    <file path="/pom.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369209238372" ignored="false" />
+    <file path="/PersonBean.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369819534454" ignored="false" />
+    <file path="/pom.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369747696707" ignored="false" />
     <file path="/AuthenticationBean.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368187602550" ignored="false" />
     <file path="/applicationContext-security.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1367997620396" ignored="false" />
     <file path="/applicationContext.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368446596254" ignored="false" />
     <file path="/fragment.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369646106607" ignored="false" />
     <file path="/applicationContext-security-3.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1367930552710" ignored="false" />
     <file path="/web.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368177178101" ignored="false" />
-    <file path="/Persoon.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369309036097" ignored="false" />
+    <file path="/Persoon.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369817876093" ignored="false" />
     <file path="/Medewerker.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1367999026371" ignored="false" />
-    <file path="/PersoonServiceIntegratieTest.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369215742180" ignored="false" />
+    <file path="/PersoonServiceIntegratieTest.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369817911698" ignored="false" />
     <file path="/PersoonDaoImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368016340690" ignored="false" />
-    <file path="/PersoonServiceImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369215040175" ignored="false" />
+    <file path="/PersoonServiceImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369818095677" ignored="false" />
     <file path="/organisationtool.sql" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368790567613" ignored="false" />
     <file path="/menu.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369311513428" ignored="false" />
     <file path="/medewerker-new.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368007028188" ignored="false" />
     <file path="/persontable.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368177604315" ignored="false" />
-    <file path="/faces-config.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369311585904" ignored="false" />
+    <file path="/faces-config.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369731610668" ignored="false" />
     <file path="/editperson.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368013861081" ignored="false" />
-    <file path="/PersoonService.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369215005177" ignored="false" />
+    <file path="/PersoonService.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369744070567" ignored="false" />
     <file path="/PersoonDao.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368015895501" ignored="false" />
     <file path="/medewerker.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368016427841" ignored="false" />
     <file path="/freelancer.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368018783240" ignored="false" />
@@ -47,13 +100,13 @@
     <file path="/index.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368192184659" ignored="false" />
     <file path="/newentity.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368529464804" ignored="false" />
     <file path="/persondetail.jspx" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368193405636" ignored="false" />
-    <file path="/persondetail.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369647218594" ignored="false" />
+    <file path="/persondetail.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369662803354" ignored="false" />
     <file path="/template.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368433837022" ignored="false" />
     <file path="/expired.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368520266915" ignored="false" />
     <file path="/ViewScope.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368446440012" ignored="false" />
-    <file path="/persontable.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369223308108" ignored="false" />
+    <file path="/persontable.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369731569419" ignored="false" />
     <file path="/ReloadBean.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368519800819" ignored="false" />
-    <file path="/Dummy.txt" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369654235844" ignored="false" />
+    <file path="/Dummy.txt" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369654305740" ignored="false" />
     <file path="/freelancer.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368529451757" ignored="false" />
     <file path="/medewerker.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368607475793" ignored="false" />
     <file path="/medewerker-new.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368778715736" ignored="false" />
@@ -68,17 +121,17 @@
     <file path="/KlantBean.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369648403791" ignored="false" />
     <file path="/KlantService.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369230243302" ignored="false" />
     <file path="/KlantGeschiedenis.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368782823476" ignored="false" />
-    <file path="/KlantDaoImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368791610718" ignored="false" />
-    <file path="/Klant.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369303186273" ignored="false" />
+    <file path="/KlantDaoImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369821870602" ignored="false" />
+    <file path="/Klant.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369820931055" ignored="false" />
     <file path="/KlantDaoIntegrationTest.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368797822438" ignored="false" />
-    <file path="/KlantDao.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368791588780" ignored="false" />
-    <file path="/persistence.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1368793594177" ignored="false" />
+    <file path="/KlantDao.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369821336443" ignored="false" />
+    <file path="/persistence.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369742000147" ignored="false" />
     <file path="/KlantServiceImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369230272715" ignored="false" />
     <file path="/GenericHibernateDaoImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369140829847" ignored="false" />
     <file path="/settings.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369142006494" ignored="false" />
     <file path="/db.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369210652898" ignored="false" />
-    <file path="/changes.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369296607307" ignored="false" />
-    <file path="/PersoonGeschiedenis.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369214211101" ignored="false" />
+    <file path="/changes.xml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369733682136" ignored="false" />
+    <file path="/PersoonGeschiedenis.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369813650963" ignored="false" />
     <file path="/klanttable.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369229417377" ignored="false" />
     <file path="/klantdetail.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369647825365" ignored="false" />
     <file path="/editklant.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369226527483" ignored="false" />
@@ -319,6 +372,17 @@
     <file path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/WebServices.jar!/schemas/bindingschema_2_0.xsd" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369652799913" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/WebServices.jar!/schemas/jboss-jaxrpc-config_2_0.xsd" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369652799913" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/WebServices.jar!/schemas/wsdl20.xsd" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369652799913" ignored="false" />
+    <file path="/upload.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369663299476" ignored="false" />
+    <file path="/UploadBean.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369732492437" ignored="false" />
+    <file path="/documents.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369730063539" ignored="false" />
+    <file path="/doc-overview.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369731768634" ignored="false" />
+    <file path="/medewerkers-detail.xhtml" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369732655987" ignored="false" />
+    <file path="/PersoonDocument.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369748292961" ignored="false" />
+    <file path="/PersoonDocumentsDao.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369738254322" ignored="false" />
+    <file path="/PersoonDocumentsDaoImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369738850688" ignored="false" />
+    <file path="/Geschiedenis.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369813031979" ignored="false" />
+    <file path="/PersoonGeschiedenisDaoImpl.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369814469580" ignored="false" />
+    <file path="/KlantServiceIntegrationTest.java" changelist="a13a9111-8295-4a91-b9c5-b5b4119f5135" time="1369820498313" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,22 +404,7 @@
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" line="109" class="be.e2partners.integration.PersoonServiceIntegratieTest" package="be.e2partners.integration">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="235" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="240" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -385,7 +434,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="90" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="95" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -400,7 +449,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="259" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="264" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -415,7 +464,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="82" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="83" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -430,7 +479,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="161" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="166" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -445,7 +494,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="187" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="192" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -460,7 +509,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="100" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="105" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -475,23 +524,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="171" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="176" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" line="83" class="be.e2partners.integration.PersoonServiceIntegratieTest" package="be.e2partners.integration">
-        <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="REMOVE_AFTER_HIT" value="false" />
@@ -522,36 +556,6 @@
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/GenericHibernateDaoImpl.java" line="130" class="be.e2partners.persistence.impl.GenericHibernateDaoImpl" package="be.e2partners.persistence.impl">
         <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/KlantServiceIntegrationTest.java" line="80" class="be.e2partners.integration.KlantServiceIntegrationTest" package="be.e2partners.integration">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/KlantServiceIntegrationTest.java" line="81" class="be.e2partners.integration.KlantServiceIntegrationTest" package="be.e2partners.integration">
-        <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="REMOVE_AFTER_HIT" value="false" />
@@ -715,7 +719,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="278" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" line="283" class="be.e2partners.web.PersonBean" package="be.e2partners.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -746,6 +750,126 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/KlantBean.java" line="130" class="be.e2partners.web.KlantBean" package="be.e2partners.web">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/UploadBean.java" line="34" class="be.e2partners.web.UploadBean" package="be.e2partners.web">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/UploadBean.java" line="53" class="be.e2partners.web.UploadBean" package="be.e2partners.web">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/UploadBean.java" line="57" class="be.e2partners.web.UploadBean" package="be.e2partners.web">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" line="161" class="be.e2partners.integration.PersoonServiceIntegratieTest" package="be.e2partners.integration">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" line="124" class="be.e2partners.integration.PersoonServiceIntegratieTest" package="be.e2partners.integration">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" line="93" class="be.e2partners.integration.PersoonServiceIntegratieTest" package="be.e2partners.integration">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" line="127" class="be.e2partners.integration.PersoonServiceIntegratieTest" package="be.e2partners.integration">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/PersoonServiceImpl.java" line="76" class="be.e2partners.persistence.service.PersoonServiceImpl" package="be.e2partners.persistence.service">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -806,77 +930,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KlantBean.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/KlantBean.java">
+      <file leaf-file-name="KlantServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/impl/KlantServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="72" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.5160142">
+            <state line="23" column="16" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KlantDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/KlantDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="19" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KlantDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/KlantDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="54" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2901#2910#0" expanded="true" />
+                <marker date="1369821985188" expanded="true" signature="655:701" placeholder="DELETE from ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Klant.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Klant.java">
+      <file leaf-file-name="GenericHibernateDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/GenericHibernateDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+            <state line="127" column="16" selection-start="3920" selection-end="3920" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="klantdetail.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klantdetail.xhtml">
+      <file leaf-file-name="PersoonDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="116" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0">
+            <state line="40" column="107" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1369648256041" expanded="true" signature="1580:1592" placeholder="{...}" />
+                <marker date="1369817145253" expanded="true" signature="553:617" placeholder="UPDATE Perso..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persondetail.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/persondetail.xhtml">
+      <file leaf-file-name="GenericDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/GenericDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="34" selection-start="397" selection-end="411" vertical-scroll-proportion="0.0">
+            <state line="56" column="6" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="32" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0">
+            <state line="58" column="54" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersoonConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/converter/PersoonConverter.java">
+      <file leaf-file-name="db.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/db.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="94" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0">
+            <state line="10" column="90" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Persoon.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Persoon.java">
+      <file leaf-file-name="db.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/sql/db.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="18" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.0">
+            <state line="54" column="94" selection-start="2724" selection-end="2724" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/converter/ContactConverter.java">
+      <file leaf-file-name="changes.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/sql/changes.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
+            <state line="5" column="55" selection-start="333" selection-end="333" vertical-scroll-proportion="0.16221374">
               <folding />
             </state>
           </provider>
@@ -901,22 +1043,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klanttable.xhtml" />
-        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/KlantService.java" />
-        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/impl/KlantServiceImpl.java" />
-        <option value="$PROJECT_DIR$/OrgTool-Persistence/sql/changes.xml" />
-        <option value="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Klant.java" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/contacts/contact.xhtml" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/contacts/contact-new.xhtml" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/template/menu.jspx" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/PersoonService.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/PersoonDao.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonDaoImpl.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/PersoonServiceIntegratieTest.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/PersoonServiceImpl.java" />
         <option value="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Persoon.java" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/converter/PersoonConverter.java" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/converter/ContactConverter.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/PersoonDocument.java" />
         <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/persondetail.xhtml" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klantdetail.xhtml" />
-        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/KlantBean.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/HistoryBean.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/KlantServiceIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Klant.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/impl/KlantServiceImpl.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/KlantDao.java" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/KlantDaoImpl.java" />
+        <option value="$PROJECT_DIR$/data/db.xml" />
+        <option value="$PROJECT_DIR$/OrgTool-Persistence/sql/changes.xml" />
       </list>
     </option>
   </component>
@@ -937,6 +1079,20 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="OrgTool-Webapp Maven Webapp" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="OrgTool-Webapp Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -977,6 +1133,16 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Profiles" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -1945,16 +2111,128 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Persistence\sql" />
+      <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Persistence\src\test\resources\be.e2partners.integration" />
+      <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Webapp\src\main\webapp\images" />
       <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Webapp\src\main\webapp\contacts" />
       <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Webapp\src\main\webapp\klanten" />
-      <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Webapp\src\main\webapp\images" />
-      <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Persistence\src\main\resources\db" />
-      <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Webapp\src\main\webapp\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Webapp\src\main\webapp\images" />
       <recent name="C:\DEV\projects\thomas\E2-Demo\OrgTool-Persistence\sql" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/README.md</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="JUnit.KlantServiceIntegrationTest.testKlantDao">
     <configuration default="false" name="PersoonServiceIntegratieTest.testService" type="JUnit" factoryName="JUnit" temporary="true">
@@ -2005,6 +2283,40 @@
       <option name="MAIN_CLASS_NAME" value="be.e2partners.integration.KlantServiceIntegrationTest" />
       <option name="METHOD_NAME" value="testKlantDao" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PersoonServiceIntegratieTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="be.e2partners.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="OrgTool-Persistence" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="be.e2partners.integration" />
+      <option name="MAIN_CLASS_NAME" value="be.e2partners.integration.PersoonServiceIntegratieTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -2239,15 +2551,17 @@
         </option>
       </method>
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.local tomcat 7" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.PersoonServiceIntegratieTest.testService" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.KlantServiceIntegrationTest.testKlantDao" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PersoonServiceIntegratieTest" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="JUnit.KlantServiceIntegrationTest.testKlantDao" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PersoonServiceIntegratieTest.testService" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PersoonServiceIntegratieTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PersoonServiceIntegratieTest.testService" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -2281,16 +2595,22 @@
       <created>1367583069260</created>
       <updated>1367583069260</updated>
     </task>
+    <task id="LOCAL-00001" summary="idea settings (not important)">
+      <created>1369654313040</created>
+      <updated>1369654313040</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1929" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32801822" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67009133" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4063927" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2298,22 +2618,21 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242009" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5314835" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18623266" sideWeight="0.2716895" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12219851" sideWeight="0.67198175" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12219851" sideWeight="0.6712329" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18623266" sideWeight="0.67198175" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18623266" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2956621" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5314835" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2359,7 +2678,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea settings (not important)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2373,6 +2692,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="idea settings (not important)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2384,109 +2704,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/richfaces/core/richfaces-core-impl/4.3.1.Final/richfaces-core-impl-4.3.1.Final-sources.jar!/org/richfaces/context/PartialViewExecuteVisitCallback.java">
+    <entry file="file://$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/PersoonDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.673774" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/richfaces/ui/richfaces-components-ui/4.3.1.Final/richfaces-components-ui-4.3.1.Final-sources.jar!/org/richfaces/renderkit/SelectManyRendererBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="108" selection-start="5351" selection-end="5351" vertical-scroll-proportion="0.58635396" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/richfaces/ui/richfaces-components-ui/4.3.1.Final/richfaces-components-ui-4.3.1.Final-sources.jar!/org/richfaces/renderkit/SelectManyHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="353" column="0" selection-start="18258" selection-end="18258" vertical-scroll-proportion="0.31732777">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/richfaces/core/richfaces-core-impl/4.3.1.Final/richfaces-core-impl-4.3.1.Final-sources.jar!/org/richfaces/context/ExtendedPartialViewContextImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="0" selection-start="8013" selection-end="8013" vertical-scroll-proportion="6.7782516" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/converter/ContactConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/richfaces/core/richfaces-core-impl/4.3.1.Final/richfaces-core-impl-4.3.1.Final-sources.jar!/org/richfaces/context/BaseExtendedVisitContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="0" selection-start="10747" selection-end="10747" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/common/persondetail.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="397" selection-end="411" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="18" column="47" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/PersonBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="32" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0">
+        <state line="84" column="11" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/HistoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="79" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OrgTool-Domain/src/main/java/be/e2partners/domain/Klant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+        <state line="42" column="51" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/myfaces/core/myfaces-impl/2.1.10/myfaces-impl-2.1.10.jar!/org/apache/myfaces/el/unified/resolver/FacesCompositeELResolver.class">
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/test/java/be/e2partners/integration/KlantServiceIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.35266823" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/3.3.2.GA/hibernate-core-3.3.2.GA-sources.jar!/org/hibernate/collection/AbstractPersistentCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="379" column="0" selection-start="10561" selection-end="10561" vertical-scroll-proportion="0.0">
+        <state line="32" column="19" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/3.3.2.GA/hibernate-core-3.3.2.GA-sources.jar!/org/hibernate/collection/PersistentBag.java">
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/KlantService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1897" selection-end="1897" vertical-scroll-proportion="0.3326226" />
+        <state line="16" column="17" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/webapp/klanten/klantdetail.xhtml">
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/GenericDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="116" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0">
+        <state line="56" column="6" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/service/impl/KlantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/KlantDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="19" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/GenericHibernateDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="16" selection-start="3920" selection-end="3920" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/PersoonDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="107" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1369648256041" expanded="true" signature="1580:1592" placeholder="{...}" />
+            <marker date="1369817145253" expanded="true" signature="553:617" placeholder="UPDATE Perso..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/converter/PersoonConverter.java">
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/src/main/java/be/e2partners/persistence/impl/KlantDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="94" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgTool-Webapp/src/main/java/be/e2partners/web/KlantBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="72" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.5160142">
+        <state line="36" column="54" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2901#2910#0" expanded="true" />
+            <marker date="1369821985188" expanded="true" signature="655:701" placeholder="DELETE from ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="54" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/db.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="90" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/sql/db.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="94" selection-start="2724" selection-end="2724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgTool-Persistence/sql/changes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="55" selection-start="333" selection-end="333" vertical-scroll-proportion="0.16221374">
+          <folding />
         </state>
       </provider>
     </entry>

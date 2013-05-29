@@ -1,8 +1,16 @@
 package be.e2partners.domain;
 
 
+import org.hibernate.annotations.IndexColumn;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by IntelliJ IDEA.
@@ -33,8 +41,18 @@ public abstract class Persoon implements Serializable {
     protected PersoonType persoonType;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "persoon")
+    private Set<PersoonGeschiedenis> persoonGeschiedenis;
+
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "owner")
+//    @OrderColumn(name="id")
+    private List<PersoonDocument> documents;
+
+
 
     public String getNaam() {
         return naam;
@@ -74,6 +92,22 @@ public abstract class Persoon implements Serializable {
         return this.naam+" "+this.voornaam;
     }
 
+    public List<PersoonDocument> getDocuments() {
+        return documents;
+    }
+
+    public void setDocuments(List<PersoonDocument> documents) {
+        this.documents = documents;
+    }
+
+    public void addDocument(PersoonDocument document){
+        if(this.documents == null){
+            documents = new ArrayList<PersoonDocument>();
+        }
+        documents.add(document);
+        document.setOwner(this);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -94,6 +128,21 @@ public abstract class Persoon implements Serializable {
         result = 31 * result + voornaam.hashCode();
         result = 31 * result + persoonType.hashCode();
         return result;
+    }
+
+    public Set<PersoonGeschiedenis> getPersoonGeschiedenis() {
+        return persoonGeschiedenis;
+    }
+
+    public void setPersoonGeschiedenis(Set<PersoonGeschiedenis> persoonGeschiedenis) {
+        this.persoonGeschiedenis = persoonGeschiedenis;
+    }
+
+    public void addPersoonGeschiedenis(PersoonGeschiedenis geschiedenis){
+        if(this.persoonGeschiedenis == null){
+            this.persoonGeschiedenis = new HashSet<PersoonGeschiedenis>();
+        }
+        this.persoonGeschiedenis.add(geschiedenis);
     }
 
     //    @JoinColumn(name = "ptype_id", nullable = false)

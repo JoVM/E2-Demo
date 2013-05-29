@@ -1,6 +1,7 @@
 package be.e2partners.persistence.service;
 
 import be.e2partners.domain.Persoon;
+import be.e2partners.domain.PersoonDocument;
 import be.e2partners.domain.PersoonGeschiedenis;
 import be.e2partners.domain.PersoonType;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,8 +29,8 @@ public interface PersoonService {
     @Transactional(readOnly = false)
     Persoon update(Persoon persoon);
 
-    @Transactional(readOnly = true)
-    List<PersoonGeschiedenis> getPersoonGeschiedenis(Long id);
+//    @Transactional(readOnly = true)
+//    List<PersoonGeschiedenis> getPersoonGeschiedenis(Long id);
 
     @Transactional
     List<Persoon> getAllPersons();
@@ -37,8 +38,14 @@ public interface PersoonService {
     @Transactional
     List<? extends Persoon> getAllPersons(PersoonType type);
 
+//    @Transactional
+//    void addPersoonGeschiedenis(PersoonGeschiedenis geschiedenis);
+
     @Transactional
-    void addPersoonGeschiedenis(PersoonGeschiedenis geschiedenis);
+    PersoonDocument createDocument(PersoonDocument document);
+
+    @Transactional
+    boolean deleteDocumentById(PersoonDocument document);
 
     List<PersoonType> getAllTypes();
 

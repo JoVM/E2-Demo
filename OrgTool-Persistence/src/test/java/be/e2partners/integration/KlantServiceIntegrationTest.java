@@ -77,9 +77,11 @@ public class KlantServiceIntegrationTest implements ApplicationContextAware {
 
     @After
     public void tearDown(){
+        klant.getRelatedPersons().clear();
+        klantService.update(klant);
         klantService.delete(klant);
-        persoonService.deleteById(medewerker);
         persoonService.deleteById(contact);
+        persoonService.deleteById(medewerker);
     }
 
 

@@ -2,29 +2,5 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 
 
-    <changeSet author="peeteth" id="1369209904300-8" >
-        <addForeignKeyConstraint baseColumnNames="persoon_id" baseTableName="persoonhistory" baseTableSchemaName="e2p_orga" constraintName="persoonhistory_ibfk_1"
-                                 deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="NO ACTION" referencedColumnNames="id"
-                                 referencedTableName="persoon" referencedTableSchemaName="e2p_orga" referencesUniqueColumn="false"/>
-    </changeSet>
-
-    <changeSet author="peeteth" id="1369209904300-9">
-        <addColumn tableName="persoonhistory">
-            <column name="klant_id" type="BIGINT"  />
-        </addColumn>
-        <addForeignKeyConstraint baseTableName="persoonhistory" baseColumnNames="klant_id" constraintName="persoonhistory-klant-fk"
-                                 referencedTableName="klant"
-                                 referencedColumnNames="klant_id"  />
-
-    </changeSet>
-
-    <changeSet id="2013-05-23" author="peeteth">
-        <addColumn tableName="klant">
-            <column name="adres" type="VARCHAR(255)"/>
-        </addColumn>
-    </changeSet>
-
-
-
 
 </databaseChangeLog>
