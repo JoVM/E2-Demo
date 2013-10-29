@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+            
+    <changeSet id="insert-testdata-1" author="peeteth">
+        <insert tableName="persoon">
+            <column name="naam">Peeters</column>
+            <column name="voornaam">Thomas</column>
+            <column name="persoontype_id">1</column>
+            <column name="persoonType">1</column>
+        </insert>
+    </changeSet>
+    <changeSet id="insert-testdata-2" author="peeteth">
+        <insert tableName="persoon">
+            <column name="naam">Wouters</column>
+            <column name="voornaam">Fons</column>
+            <column name="persoontype_id">0</column>
+            <column name="persoonType">0</column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-testdata-3" author="peeteth">
+        <insert tableName="persoon">
+            <column name="naam">Janssens</column>
+            <column name="voornaam">Dave</column>
+            <column name="persoontype_id">2</column>
+            <column name="persoonType">2</column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-testdata-4" author="peeteth">
+        <insert tableName="persoon">
+            <column name="naam">Tennode</column>
+            <column name="voornaam">Josse</column>
+            <column name="persoontype_id">3</column>
+            <column name="persoonType">3</column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-testdata-5" author="peeteth">
+        <insert tableName="persoon">
+            <column name="naam">Peeters</column>
+            <column name="voornaam">Ward</column>
+            <column name="persoontype_id">1</column>
+            <column name="persoonType">1</column>
+        </insert>
+    </changeSet>
+
+
+
+    
+</databaseChangeLog>

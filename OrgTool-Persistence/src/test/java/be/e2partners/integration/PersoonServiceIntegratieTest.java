@@ -34,7 +34,7 @@ import static junit.framework.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:be.e2partners.integration/applicationContext-test.xml"})
 //@Ignore // TODO: re-enable and make this work damnit!
-public class PersoonServiceIntegratieTest implements ApplicationContextAware{
+public class PersoonServiceIntegratieTest implements ApplicationContextAware {
 
 
     private Persoon medewerker;
@@ -147,6 +147,7 @@ public class PersoonServiceIntegratieTest implements ApplicationContextAware{
             medewerker.addDocument(document);
 
             pService.update(medewerker);
+
 
 
 

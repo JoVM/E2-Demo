@@ -28,7 +28,7 @@ public class PersoonDocument implements Serializable {
     @Column(name = "content")
     private byte[] content;
 
-
+    private String bestandsnaam;
 
 
     public Long getId() {
@@ -53,5 +53,13 @@ public class PersoonDocument implements Serializable {
 
     public void setContent(byte[] content) {
         this.content = content;
+    }
+
+    public String getBestandsnaam() {
+        return bestandsnaam;
+    }
+
+    public void setBestandsnaam(String bestandsnaam) {
+        this.bestandsnaam = bestandsnaam;
     }
 }

@@ -75,4 +75,9 @@
     <changeSet author="peeteth (generated)" id="1369825936560-11">
         <addForeignKeyConstraint baseColumnNames="klant_id" baseTableName="persoonhistory" baseTableSchemaName="e2p_orga" constraintName="FK4A1711BC6FC1139B" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="klant_id" referencedTableName="klant" referencedTableSchemaName="e2p_orga" referencesUniqueColumn="false"/>
     </changeSet>
+
+
+    <include file="changes.xml" relativeToChangelogFile="true" />
+    <include file="testdata.xml" relativeToChangelogFile="true"/>
+
 </databaseChangeLog>

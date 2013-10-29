@@ -46,7 +46,7 @@
             </rich:column>
 
             <rich:column >
-                <a4j:commandButton id = "historyButton" image="/images/history_icon.png" action="#{personBean.manageCVs(persoon)}" >
+                <a4j:commandButton id = "historyButton" image="/images/history_icon.png" action="#{personBean.document(persoon)}" >
                     <rich:tooltip for = "historyButton" value="Show history" layout="block" mode="ajax">Show history</rich:tooltip>
                 </a4j:commandButton>
                 <a4j:commandButton id = "editButton" image="/images/edit-user-icon.png" action="#{personBean.editPersoon(persoon)}" >

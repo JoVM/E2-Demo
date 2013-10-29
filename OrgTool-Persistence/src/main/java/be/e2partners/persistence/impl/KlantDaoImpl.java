@@ -23,12 +23,13 @@ public class KlantDaoImpl extends GenericHibernateDaoImpl<Klant,Long> implements
 
     @Override
     public boolean removeKlantPersonen(Klant klant) {
-
-        String deleteQry = "DELETE from klantpersonen where klant_id = :id";
-
-        Query query = getEntityManager().createNativeQuery(deleteQry);
-        query.setParameter("id",klant.getId());
-        query.executeUpdate();
+        klant.getRelatedPersons().clear();
+        update(klant);
+//        String deleteQry = "DELETE from klantpersonen where klant_id = :id";
+//
+//        Query query = getEntityManager().createNativeQuery(deleteQry);
+//        query.setParameter("id",klant.getId());
+//        int result = query.executeUpdate();
         return true;
     }
 

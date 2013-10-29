@@ -10,6 +10,30 @@
 
     <h:outputText value = "Files overview: #{persoon.personIdentifier} "/>
 
+    <h:form id="tableForm" >
+        <rich:dataTable value="#{uploadBean.documents(persoon)}" var="document" styleClass="fullWidth" id = "docsTable" rowClass="rowStyle"  >
+
+            <rich:column>
+                <f:facet name="header">
+                        <h:outputText value="Filename"/>
+
+                </f:facet>
+                <h:outputText value="#{document.bestandsnaam}"/>
+            </rich:column>
+
+            <rich:column  >
+                <f:facet name="header">
+                    <h:outputText value="Actions"/>
+                </f:facet>
+                <h:commandButton id = "getButton" image="/images/files_icon.png" actionListener="#{personBean.getDocument(document)}">
+                    <rich:tooltip for = "getButton" value="Get this file" layout="block" mode="ajax">Get this file</rich:tooltip>
+                </h:commandButton>
+            </rich:column>
+
+
+
+        </rich:dataTable>
+    </h:form>
 
 
 </ui:composition>

@@ -27,9 +27,6 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
     @Autowired
     private PersoonDao persoonDao;
 
-//    @Autowired
-//    private PersoonGeschiedenisDao persoonGeschiedenisDao;
-
     @Autowired
     private PersoonDocumentsDao persoonDocumentsDao;
 
@@ -37,7 +34,6 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
     @Override
     public Persoon createPersoon(Persoon persoon) {
         Validate.notNull(persoon,"Een persoon kan niet null zijn wanneer deze wordt gepersisteerd");
-
 
         PersoonGeschiedenis pg = new PersoonGeschiedenis();
         Persoon persisted = persoonDao.create(persoon);
@@ -47,11 +43,7 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
 
         persisted.addPersoonGeschiedenis(pg);
         persoonDao.update(persisted);
-
-//        persoonGeschiedenisDao.create(pg);
-
         return persisted;
-
     }
 
     @Override
@@ -82,19 +74,8 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
         persoon.addPersoonGeschiedenis(pg);
 
         Persoon persisted = persoonDao.update(persoon);
-
-
-
-//        persoonGeschiedenisDao.create(pg);
-
         return persisted;
-
     }
-
-//    @Override
-//    public List<PersoonGeschiedenis> getPersoonGeschiedenis(Long id) {
-//        return persoonGeschiedenisDao.getGeschiedenisPerPersoon(id);
-//    }
 
     @Override
     public List<Persoon> getAllPersons() {
@@ -105,11 +86,6 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
     public List<? extends Persoon> getAllPersons(PersoonType type) {
         return persoonDao.getSpecificList(type);
     }
-
-//    @Override
-//    public void addPersoonGeschiedenis(PersoonGeschiedenis geschiedenis) {
-//        persoonGeschiedenisDao.create(geschiedenis);
-//    }
 
     @Override
     public PersoonDocument createDocument(PersoonDocument document) {
@@ -131,9 +107,6 @@ public class PersoonServiceImpl implements PersoonService,Serializable {
     @Override
     public Persoon modifyPersonType(Persoon source, PersoonType target) {
         Persoon ret = null;
-//        if(source.getPersoonType().equals(target)){
-//            return source;
-//        }
         switch (target){
             case CONTACT:{
                 ret = new ContactPersoon();

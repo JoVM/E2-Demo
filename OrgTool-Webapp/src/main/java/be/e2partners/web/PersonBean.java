@@ -11,9 +11,12 @@ import org.springframework.stereotype.Controller;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
-import java.io.Serializable;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -42,19 +45,22 @@ public class PersonBean implements Serializable{
     private PersoonType currentPersonType;
     private String mode = "CREATE";
 
+    private static final int DEFAULT_BUFFER_SIZE = 102400; // 10KB.
+
     private String nameFilter;
 
 //    private Map<PersoonType,Persoon> persoonCache = new HashMap<PersoonType, Persoon>(PersoonType.values().length);
 
-//    @PostConstruct
+    //    @PostConstruct
 //    public void init(){
 //
 //    }
     @Autowired
     private PersoonService persoonService;
 
-//    TreeNode<PersoonGeschiedenis> treeNode;
+    //    TreeNode<PersoonGeschiedenis> treeNode;
     private String headerName;
+    private String getDocument;
 
     public List<Persoon> getPersons(){
         return persoonService.getAllPersons();
@@ -81,7 +87,7 @@ public class PersonBean implements Serializable{
     public String manageCVs(Persoon persoon){
         //TODO: rename
 
-        Set<PersoonGeschiedenis> geschiedenis = persoon.getPersoonGeschiedenis();
+//        Set<PersoonGeschiedenis> geschiedenis = persoon.getPersoonGeschiedenis();
         currentPerson = persoon;
         currentPersonType = persoon.getPersoonType();
         mode = "EDIT";
@@ -298,6 +304,65 @@ public class PersonBean implements Serializable{
         this.nameFilter = "";
     }
 
+    private static void close(Closeable resource) {
+        if (resource != null) {
+            try {
+                resource.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e); //todo: throw?
+            }
+        }
+    }
 
+    public void getDocument(PersoonDocument doc) {
+        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
+        ByteArrayInputStream bais = new ByteArrayInputStream(doc.getContent());
+
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        ExternalContext externalContext = facesContext.getExternalContext();
+        externalContext.responseReset();
+        externalContext.setResponseContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+//        externalContext.setResponseHeader("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+        externalContext.setResponseHeader("Content-Length", String.valueOf(bais.available()));
+        externalContext.setResponseHeader("Content-Disposition", "attachment; filename=\"" + doc.getBestandsnaam() + "\"");
+        try {
+            OutputStream output = externalContext.getResponseOutputStream();
+            output.write(doc.getContent());
+            output.flush();
+            output.close();
+//            externalContext.getResponseOutputStream().write(doc.getContent());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        facesContext.responseComplete();
+
+//        response.reset();
+//        response.setBufferSize(DEFAULT_BUFFER_SIZE);
+//        response.setContentType("application/msword");
+//        response.setHeader("Content-Length",String.valueOf(bais.available()));
+//        response.setHeader("Content-Disposition", "attachment; filename=\"" + doc.getBestandsnaam() + "\"");
+//
+//        BufferedInputStream inputStream = null;
+//        BufferedOutputStream outputStream = null;
+//
+//        try {
+//            inputStream = new BufferedInputStream(bais,DEFAULT_BUFFER_SIZE);
+//            outputStream = new BufferedOutputStream(response.getOutputStream(),DEFAULT_BUFFER_SIZE);
+//            byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
+//            int length;
+//            while ((length = inputStream.read(buffer)) > 0) {
+//                outputStream.write(buffer, 0, length);
+//            }
+//
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        } finally {
+//            close(outputStream);
+//            close(inputStream);
+//        }
+
+
+    }
 }
 

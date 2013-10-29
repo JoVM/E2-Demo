@@ -10,20 +10,17 @@ import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
- * User: user
+ * User: user                                                                        dddd
  * Date: 16/11/11
  * Time: 10:29
  *
  */
 @Repository
-public class PersoonDaoImpl extends GenericHibernateDaoImpl<Persoon,Long> implements PersoonDao{
+public class PersoonDaoImpl extends GenericHibernateDaoImpl<Persoon,Long> implements PersoonDao {
 
     @Override
     public Persoon update(Persoon entity) {
         String updatePT = "UPDATE Persoon P set P.persoontype_id = :typeId where P.id = :id";
-
-
-//        Query query = getEntityManager().createQuery(updatePT);
         Query query = getEntityManager().createNativeQuery(updatePT);
         query.setParameter("id",entity.getId());
         query.setParameter("typeId",entity.getPersoonType().getTypeId());

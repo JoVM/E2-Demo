@@ -44,13 +44,13 @@ public abstract class Persoon implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "persoon")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "persoon",fetch = FetchType.EAGER)
     private Set<PersoonGeschiedenis> persoonGeschiedenis;
 
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "owner")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "owner",fetch = FetchType.EAGER)
 //    @OrderColumn(name="id")
-    private List<PersoonDocument> documents;
+    private Set<PersoonDocument> documents;
 
 
 
@@ -92,17 +92,17 @@ public abstract class Persoon implements Serializable {
         return this.naam+" "+this.voornaam;
     }
 
-    public List<PersoonDocument> getDocuments() {
+    public Set<PersoonDocument> getDocuments() {
         return documents;
     }
 
-    public void setDocuments(List<PersoonDocument> documents) {
+    public void setDocuments(Set<PersoonDocument> documents) {
         this.documents = documents;
     }
 
     public void addDocument(PersoonDocument document){
         if(this.documents == null){
-            documents = new ArrayList<PersoonDocument>();
+            documents = new HashSet<PersoonDocument>();
         }
         documents.add(document);
         document.setOwner(this);
