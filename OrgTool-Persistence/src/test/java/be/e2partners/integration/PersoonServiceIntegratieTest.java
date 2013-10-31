@@ -143,13 +143,18 @@ public class PersoonServiceIntegratieTest implements ApplicationContextAware {
 
             PersoonDocument document = new PersoonDocument();
             document.setContent(bytes);
+            document.setBestandsnaam("testdoc.docx");
 
             medewerker.addDocument(document);
 
-            pService.update(medewerker);
+            Persoon added = pService.update(medewerker);
+            assertTrue(added.getDocuments().contains(document));
 
+            boolean removed = medewerker.getDocuments().remove(document);
+            assertTrue(removed);
 
-
+            Persoon removedDocPerson = pService.update(medewerker);
+            assertFalse("Document not removed", removedDocPerson.getDocuments().contains(document));
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -167,8 +172,6 @@ public class PersoonServiceIntegratieTest implements ApplicationContextAware {
         pService.deleteById(free);
 
         pService.deleteById(cont);
-
-
 
         klantService.delete(klant);
     }

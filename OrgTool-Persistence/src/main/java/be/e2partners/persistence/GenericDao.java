@@ -8,6 +8,7 @@ package be.e2partners.persistence;
  *
  */
 
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
@@ -30,6 +31,7 @@ public interface GenericDao<T extends Serializable, ID extends Serializable> {
      *            the primary key
      * @return the entity
      */
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     T findById(final ID id);
 
     /**

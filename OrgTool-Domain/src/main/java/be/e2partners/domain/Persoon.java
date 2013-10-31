@@ -1,6 +1,7 @@
 package be.e2partners.domain;
 
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.IndexColumn;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,9 +49,10 @@ public abstract class Persoon implements Serializable {
     private Set<PersoonGeschiedenis> persoonGeschiedenis;
 
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "owner",fetch = FetchType.EAGER)
-//    @OrderColumn(name="id")
-    private Set<PersoonDocument> documents;
+
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,orphanRemoval=true)
+    @JoinColumn(name = "owner_id")
+    private Set<PersoonDocument> documents = new HashSet<PersoonDocument>();
 
 
 
@@ -92,20 +94,22 @@ public abstract class Persoon implements Serializable {
         return this.naam+" "+this.voornaam;
     }
 
+
     public Set<PersoonDocument> getDocuments() {
         return documents;
     }
 
-    public void setDocuments(Set<PersoonDocument> documents) {
+    private void setDocuments(Set<PersoonDocument> documents) {
         this.documents = documents;
     }
 
     public void addDocument(PersoonDocument document){
-        if(this.documents == null){
-            documents = new HashSet<PersoonDocument>();
-        }
-        documents.add(document);
+//        if(this.documents == null){
+//            documents = new HashSet<PersoonDocument>();
+//        }
         document.setOwner(this);
+        getDocuments().add(document);
+//        documents.add(document);
     }
 
     @Override
@@ -122,13 +126,13 @@ public abstract class Persoon implements Serializable {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = naam.hashCode();
-        result = 31 * result + voornaam.hashCode();
-        result = 31 * result + persoonType.hashCode();
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = naam.hashCode();
+//        result = 31 * result + voornaam.hashCode();
+//        result = 31 * result + persoonType.hashCode();
+//        return result;
+//    }
 
     public Set<PersoonGeschiedenis> getPersoonGeschiedenis() {
         return persoonGeschiedenis;

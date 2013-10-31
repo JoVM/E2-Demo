@@ -28,6 +28,9 @@
                 <h:commandButton id = "getButton" image="/images/files_icon.png" actionListener="#{personBean.getDocument(document)}">
                     <rich:tooltip for = "getButton" value="Get this file" layout="block" mode="ajax">Get this file</rich:tooltip>
                 </h:commandButton>
+                <a4j:commandButton id = "deleteButton" image="/images/delete_doc.png" actionListener="#{personBean.removeDocument(document)}">
+                    <rich:tooltip for = "getButton" value="Delete this file" layout="block" mode="ajax">Delete this file</rich:tooltip>
+                </a4j:commandButton>
             </rich:column>
 
 

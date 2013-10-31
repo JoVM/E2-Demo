@@ -45,16 +45,8 @@ public class PersonBean implements Serializable{
     private PersoonType currentPersonType;
     private String mode = "CREATE";
 
-    private static final int DEFAULT_BUFFER_SIZE = 102400; // 10KB.
-
     private String nameFilter;
 
-//    private Map<PersoonType,Persoon> persoonCache = new HashMap<PersoonType, Persoon>(PersoonType.values().length);
-
-    //    @PostConstruct
-//    public void init(){
-//
-//    }
     @Autowired
     private PersoonService persoonService;
 
@@ -65,7 +57,6 @@ public class PersonBean implements Serializable{
     public List<Persoon> getPersons(){
         return persoonService.getAllPersons();
     }
-
 
     public List<Medewerker> getMedewerkers(){
         return (List<Medewerker>) persoonService.getAllPersons(PersoonType.MEDEWERKER);
@@ -315,15 +306,12 @@ public class PersonBean implements Serializable{
     }
 
     public void getDocument(PersoonDocument doc) {
-        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
         ByteArrayInputStream bais = new ByteArrayInputStream(doc.getContent());
 
         FacesContext facesContext = FacesContext.getCurrentInstance();
         ExternalContext externalContext = facesContext.getExternalContext();
         externalContext.responseReset();
         externalContext.setResponseContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
-//        externalContext.setResponseHeader("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         externalContext.setResponseHeader("Content-Length", String.valueOf(bais.available()));
         externalContext.setResponseHeader("Content-Disposition", "attachment; filename=\"" + doc.getBestandsnaam() + "\"");
         try {
@@ -331,37 +319,18 @@ public class PersonBean implements Serializable{
             output.write(doc.getContent());
             output.flush();
             output.close();
-//            externalContext.getResponseOutputStream().write(doc.getContent());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         facesContext.responseComplete();
+    }
 
-//        response.reset();
-//        response.setBufferSize(DEFAULT_BUFFER_SIZE);
-//        response.setContentType("application/msword");
-//        response.setHeader("Content-Length",String.valueOf(bais.available()));
-//        response.setHeader("Content-Disposition", "attachment; filename=\"" + doc.getBestandsnaam() + "\"");
-//
-//        BufferedInputStream inputStream = null;
-//        BufferedOutputStream outputStream = null;
-//
-//        try {
-//            inputStream = new BufferedInputStream(bais,DEFAULT_BUFFER_SIZE);
-//            outputStream = new BufferedOutputStream(response.getOutputStream(),DEFAULT_BUFFER_SIZE);
-//            byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
-//            int length;
-//            while ((length = inputStream.read(buffer)) > 0) {
-//                outputStream.write(buffer, 0, length);
-//            }
-//
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        } finally {
-//            close(outputStream);
-//            close(inputStream);
-//        }
-
+    public void removeDocument(PersoonDocument doc) {
+        boolean removed = currentPerson.getDocuments().remove(doc);
+        if(!removed){
+            throw new RuntimeException("Invalid document removal.  Wrong person or document");
+        }
+        currentPerson = persoonService.update(currentPerson);
 
     }
 }

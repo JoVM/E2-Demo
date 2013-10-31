@@ -33,6 +33,12 @@
             <artifactId>OrgTool-Persistence</artifactId>
             <version>0.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>be.e2partners</groupId>
+            <artifactId>OrgTool-Persistence</artifactId>
+            <version>0.0.1</version>
+            <type>test-jar</type>
+        </dependency>
 
 
         <!-- Foreign libraries -->
