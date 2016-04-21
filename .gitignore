@@ -2,3 +2,8 @@ target
 .project
 .classpath
 .settings
+/.idea/workspace.xml
+/OrgTool-Webapp/OrgTool-Webapp.iml
+/OrgTool-Persistence/OrgTool-Persistence.iml
+/OrgTool-Domain/OrgTool-Domain.iml
+/OrganisationTool.iml
