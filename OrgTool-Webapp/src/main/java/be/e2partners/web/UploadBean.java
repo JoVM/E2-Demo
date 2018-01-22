@@ -4,7 +4,8 @@ import be.e2partners.domain.Persoon;
 import be.e2partners.domain.PersoonDocument;
 import be.e2partners.persistence.service.PersoonService;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.myfaces.custom.fileupload.UploadedFile;
+//import org.apache.myfaces.custom.fileupload.UploadedFile;
+import org.richfaces.model.UploadedFile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -44,7 +45,7 @@ public class UploadBean {
         try {
             String fileName = FilenameUtils.getName(uploadedFile.getName());
             String contentType = uploadedFile.getContentType();
-            byte[] bytes = uploadedFile.getBytes();
+            byte[] bytes = uploadedFile.getData();
 
             PersoonDocument document = new PersoonDocument();
             document.setOwner(persoon);
@@ -57,8 +58,8 @@ public class UploadBean {
             FacesContext.getCurrentInstance().addMessage(null,
                     new FacesMessage(String.format("File '%s' of type '%s' successfully uploaded!", fileName, contentType)));
 
-        }catch (IOException ioe){
-            throw new RuntimeException(ioe);
+        }catch (Exception e){
+            throw new RuntimeException(e);
         }
 
     }

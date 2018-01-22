@@ -29,7 +29,7 @@ import org.springframework.stereotype.Component;
 
 import be.e2partners.util.JSFUtils;
 
-import com.atlassian.crowd.integration.springsecurity.user.CrowdUserDetails;
+//import com.atlassian.crowd.integration.springsecurity.user.CrowdUserDetails;
 
 
 @Component
@@ -67,18 +67,19 @@ public class AuthenticationBean {
 	}
 
 	public String getLoggedInUser() {
-		SecurityContext ctx = SecurityContextHolder.getContext();
-
-		if (ctx.getAuthentication() != null) {
-			if (ctx.getAuthentication().getPrincipal() instanceof CrowdUserDetails) {
-				CrowdUserDetails userDetails = (CrowdUserDetails) ctx.getAuthentication().getPrincipal();
-				return userDetails.getFirstName() + " " + userDetails.getLastName();
-			} else {
-				return null;
-			}
-		} else {
-			return null;
-		}
+		return "NotImplemented";
+//		SecurityContext ctx = SecurityContextHolder.getContext();
+//
+//		if (ctx.getAuthentication() != null) {
+//			if (ctx.getAuthentication().getPrincipal() instanceof CrowdUserDetails) {
+//				CrowdUserDetails userDetails = (CrowdUserDetails) ctx.getAuthentication().getPrincipal();
+//				return userDetails.getFirstName() + " " + userDetails.getLastName();
+//			} else {
+//				return null;
+//			}
+//		} else {
+//			return null;
+//		}
 	}
 
 	@PostConstruct

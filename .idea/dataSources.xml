@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="122722426">
-    <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.6.11-log" jdbc-version="3.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.11 ( Revision: ${svn.Revision} )" uuid="d1b9891e-d217-4a60-8129-7ea41a8c37c3">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Data Source" uuid="d1b9891e-d217-4a60-8129-7ea41a8c37c3">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/e2p_orga</jdbc-url>
-      <user-name>E2P</user-name>
-      <user-password>dfefdf98dffa</user-password>
       <libraries>
         <library>
           <url>jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.11/mysql-connector-java-5.1.11.jar!/</url>
@@ -17,4 +14,3 @@
     </data-source>
   </component>
 </project>
-

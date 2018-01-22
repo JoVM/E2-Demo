@@ -30,9 +30,9 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>
             /WEB-INF/applicationContext.xml
-            classpath:/applicationContext-CrowdClient.xml
+            <!--classpath:/applicationContext-CrowdClient.xml-->
 
-            /WEB-INF/applicationContext-security-3.xml
+            <!--/WEB-INF/applicationContext-security-3.xml-->
         </param-value>
     </context-param>
 
@@ -90,14 +90,14 @@
 		<!--<dispatcher>INCLUDE</dispatcher>-->
 	<!--</filter-mapping>-->
 
-    <filter>
-        <filter-name>MyFacesExtensionsFilter</filter-name>
-        <filter-class>org.apache.myfaces.webapp.filter.ExtensionsFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>MyFacesExtensionsFilter</filter-name>
-        <servlet-name>Faces Servlet</servlet-name>
-    </filter-mapping>
+    <!--<filter>-->
+        <!--<filter-name>MyFacesExtensionsFilter</filter-name>-->
+        <!--<filter-class>org.apache.myfaces.webapp.filter.ExtensionsFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>MyFacesExtensionsFilter</filter-name>-->
+        <!--<servlet-name>Faces Servlet</servlet-name>-->
+    <!--</filter-mapping>-->
     <!--<filter-mapping>-->
         <!--<filter-name>MyFacesExtensionsFilter-->
         <!--</filter-name>-->
@@ -118,24 +118,24 @@
         </init-param>
     </filter>
 
-    <filter>
-        <filter-name>
-            springSecurityFilterChain
-        </filter-name>
-        <filter-class>
-            org.springframework.web.filter.DelegatingFilterProxy
-        </filter-class>
-    </filter>
+    <!--<filter>-->
+        <!--&lt;!&ndash;<filter-name>&ndash;&gt;-->
+            <!--&lt;!&ndash;springSecurityFilterChain&ndash;&gt;-->
+        <!--&lt;!&ndash;</filter-name>&ndash;&gt;-->
+        <!--<filter-class>-->
+            <!--org.springframework.web.filter.DelegatingFilterProxy-->
+        <!--</filter-class>-->
+    <!--</filter>-->
 
 
-    <filter-mapping>
-        <filter-name>
-            springSecurityFilterChain
-        </filter-name>
-        <url-pattern>/*</url-pattern>
-        <dispatcher>FORWARD</dispatcher>
-        <dispatcher>REQUEST</dispatcher>
-    </filter-mapping>
+    <!--<filter-mapping>-->
+        <!--<filter-name>-->
+            <!--springSecurityFilterChain-->
+        <!--</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+        <!--<dispatcher>FORWARD</dispatcher>-->
+        <!--<dispatcher>REQUEST</dispatcher>-->
+    <!--</filter-mapping>-->
 
 
     <listener>
@@ -151,14 +151,19 @@
     </listener>
 
 
+    <!--<servlet>-->
+        <!--<servlet-name>Faces Servlet</servlet-name>-->
+        <!--<servlet-class>-->
+            <!--org.apache.myfaces.webapp.MyFacesServlet-->
+        <!--</servlet-class>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
+
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
-        <servlet-class>
-            org.apache.myfaces.webapp.MyFacesServlet
-        </servlet-class>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.html</url-pattern>
@@ -183,7 +188,7 @@
 
     <error-page>
         <exception-type>javax.faces.application.ViewExpiredException</exception-type>
-        <location>/common/expired.html</location>
+        <location>/common/expired.xhtml</location>
     </error-page>
 
     <session-config>

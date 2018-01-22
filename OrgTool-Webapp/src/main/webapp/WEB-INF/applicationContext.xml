@@ -16,9 +16,9 @@
         </property>
     </bean>
 
-    <bean id="propertiesLocation" class="java.lang.String">
-    	<constructor-arg value="dbsettings.properties"/>
-    </bean>
+    <!--<bean id="propertiesLocation" class="java.lang.String">-->
+    	<!--<constructor-arg value="dbsettings.properties"/>-->
+    <!--</bean>-->
 
     <bean name="dataSource"
           class="org.apache.commons.dbcp.datasources.SharedPoolDataSource"

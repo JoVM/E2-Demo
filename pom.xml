@@ -101,23 +101,78 @@
     <!--TODO: Dependency management? -->
 
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>com.atlassian.crowd</groupId>-->
+            <!--<artifactId>crowd-integration-client</artifactId>-->
+            <!--<version>2.6.2</version>-->
+            <!--&lt;!&ndash;<type>pom</type>&ndash;&gt;-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.atlassian.crowd</groupId>-->
+            <!--<artifactId>crowd-integration-springsecurity</artifactId>-->
+            <!--<version>2.6.2</version>-->
+            <!--&lt;!&ndash;<exclusions>&ndash;&gt;-->
+                <!--&lt;!&ndash;<exclusion>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<artifactId>spring-security-core</artifactId>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<groupId>org.springframework.security</groupId>&ndash;&gt;-->
+                <!--&lt;!&ndash;</exclusion>&ndash;&gt;-->
+            <!--&lt;!&ndash;</exclusions>&ndash;&gt;-->
+            <!--&lt;!&ndash;<type>pom</type>&ndash;&gt;-->
+        <!--</dependency>-->
+
         <dependency>
-            <groupId>com.atlassian.crowd</groupId>
-            <artifactId>crowd-integration-client</artifactId>
-            <version>2.6.2</version>
-            <!--<type>pom</type>-->
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>3.2.10.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-core</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-context</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-beans</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-web</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-aop</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.atlassian.crowd</groupId>
-            <artifactId>crowd-integration-springsecurity</artifactId>
-            <version>2.6.2</version>
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>spring-security-core</artifactId>-->
-                    <!--<groupId>org.springframework.security</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-            <!--<type>pom</type>-->
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>3.2.10.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-context</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-core</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-beans</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-beans</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-aop</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -147,22 +202,29 @@
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>${spring.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-security-core</artifactId>
-                    <groupId>org.springframework.security</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.security</groupId>-->
+            <!--<artifactId>spring-security-config</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>spring-security-core</artifactId>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.aspectj</groupId>
